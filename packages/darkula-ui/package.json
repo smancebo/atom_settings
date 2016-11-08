@@ -1,0 +1,61 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50188-2ekz4y"
+    ]
+  ],
+  "_from": "../d-116108-50188-100b3tb/package.tgz",
+  "_id": "darkula-ui@0.1.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/darkula-ui",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-116108-50188-100b3tb/package.tgz",
+  "_shasum": "599be810b8b59fea7fa2cab84fe7b2cc038bbf2c",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50188-100b3tb/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50188-2ekz4y",
+  "bugs": {
+    "url": "https://github.com/benburton/darkula-ui/issues"
+  },
+  "dependencies": {},
+  "description": "An Atom UI theme inspired by the Darkula theme from IntelliJ IDEA.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/benburton/darkula-ui#readme",
+  "license": "MIT",
+  "name": "darkula-ui",
+  "optionalDependencies": {},
+  "private": false,
+  "readme": "# Darkula UI Theme\n\nAn [Atom](http://atom.io) UI theme inspired by the Darkula theme from [IntelliJ IDEA](http://www.jetbrains.com/idea/).\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benburton/darkula-ui.git"
+  },
+  "theme": "ui",
+  "version": "0.1.0"
+}

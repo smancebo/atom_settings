@@ -1,0 +1,70 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116917-4163-hy62du"
+    ]
+  ],
+  "_from": "../d-116917-4163-fag6t2/package.tgz",
+  "_id": "autocomplete-angular-material@0.4.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/autocomplete-angular-material",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-116917-4163-fag6t2/package.tgz",
+  "_shasum": "ff6329402f1bcafc322bf4cf3df5a7205d0e60cd",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4163-fag6t2/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116917-4163-hy62du",
+  "bugs": {
+    "url": "https://github.com/chrisgriffith/autocomplete-angular-material/issues"
+  },
+  "dependencies": {},
+  "description": "Angular Material element and attribute autocompletions",
+  "devDependencies": {
+    "coffeelint": "^1.9.7",
+    "request": "^2.53.0"
+  },
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/chrisgriffith/autocomplete-angular-material#readme",
+  "license": "MIT",
+  "main": "./lib/main",
+  "name": "autocomplete-angular-material",
+  "optionalDependencies": {},
+  "providedServices": {
+    "autocomplete.provider": {
+      "versions": {
+        "2.0.0": "getProvider"
+      }
+    }
+  },
+  "readme": "# Angular Material Autocomplete Package\n\n[Angular Material](https://material.angularjs.org/#/) tag and attribute autocompletions in Atom. Install\n[autocomplete-plus](https://github.com/atom-community/autocomplete-plus) before\ninstalling this package.\n\nThis is powered by the list of HTML tags [here](https://raw.githubusercontent.com/chrisgriffith/Angular-Material-Brackets-Extension/master/HtmlTags.json)\nand HTML attributes [here](https://raw.githubusercontent.com/chrisgriffith/Angular-Material-Brackets-Extension/master/HtmlAttributes.json)\n\nYou can update the prebuilt list of tags and attributes names and values by\nrunning the `update.coffee` file at the root of the repository and then checking\nin the changed `completions.json` file.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisgriffith/autocomplete-angular-material.git"
+  },
+  "version": "0.4.0"
+}

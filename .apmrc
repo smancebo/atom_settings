@@ -1,0 +1,2 @@
+proxy=http://10.172.0.7:8082
+https_proxy=https://10.172.0.7:8082

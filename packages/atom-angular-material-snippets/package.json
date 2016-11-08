@@ -1,0 +1,83 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116917-4334-sq5imu"
+    ]
+  ],
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".coffee": [
+        "lib/atom-angular-material-snippets-view.coffee",
+        "lib/atom-angular-material-snippets.coffee"
+      ],
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  },
+  "_from": "../d-116917-4334-1t3eqnx/package.tgz",
+  "_id": "atom-angular-material-snippets@1.3.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/atom-angular-material-snippets",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-116917-4334-1t3eqnx/package.tgz",
+  "_shasum": "a1bcbbf429ea245e9a796a6d49556dcc00400804",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116917-4334-1t3eqnx/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116917-4334-sq5imu",
+  "activationCommands": {
+    "atom-workspace": "atom-angular-material-snippets:toggle"
+  },
+  "bugs": {
+    "url": "https://github.com/smkamranqadri/atom-angular-material-snippets/issues"
+  },
+  "dependencies": {},
+  "description": "Angular Material snippets for Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/smkamranqadri/atom-angular-material-snippets#readme",
+  "keywords": [
+    "Angular Material",
+    "Atom",
+    "Snippets",
+    "Auto Complete"
+  ],
+  "license": "MIT",
+  "main": "./lib/atom-angular-material-snippets",
+  "name": "atom-angular-material-snippets",
+  "optionalDependencies": {},
+  "readme": "# atom-angular-material-snippets package\n\nThis is a snippets package for Atom, providing snippets for Angular Material.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smkamranqadri/atom-angular-material-snippets.git"
+  },
+  "version": "1.3.0"
+}

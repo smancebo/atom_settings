@@ -1,0 +1,124 @@
+// These colors are specific to the theme. Do not use in a package!
+
+@white: #fff;
+@very-light-gray: #d4d7d6;
+@light-gray: #969896;
+@blue-gray: #404f62;
+@gray: #373b41;
+@dark-gray: #282a2e;
+@very-dark-gray: #151619;
+@black: #000;
+
+@cyan: #00bfff;
+@blue: #008aff;
+@light-purple: #db84f4;
+@magenta: #ff4c98;
+@green: #6dba09;
+@red: #ee2211;
+@orange: #ffa500;
+@light-orange: #ffee44;
+@yellow: @light-orange;
+@purple: #8877ff;
+
+@background: @very-dark-gray;
+@foreground: @very-light-gray;
+
+// GUTTER
+@gutter-text: lighten(@background, 50%);
+@gutter-text-highlight: @cyan;
+@gutter-background: @background;
+@gutter-background-highlight: @selected-line;
+
+// CODE VIEW
+@code-background: @background; // editor background
+@code-font: Source Code Pro;
+@code-font-color: @foreground; // default editor text
+
+// SYNTAX COLORS
+@comment: #7a809e;
+@comment-bg: transparent;
+@comment-punc: @comment;
+@string: @blue;
+@constant: @green;
+@variable: @orange;
+@support: @magenta;
+@entity: @blue;
+@keyword: @light-purple;
+@storage: @magenta;
+@meta: @foreground;
+@function-param: @cyan;
+@function-name: @green;
+
+@error: @red;
+
+@regex: @green;
+
+@numeric: @cyan;
+@quotes: @code-font-color;
+
+@markup: @code-font-color;
+@unknown: @code-font-color;
+
+// MISC COLORS
+@invisible: fade(@white, 10%);
+@guides: fade(@white, 4%);
+@cursor-color: @code-font-color;
+@cursor-width: 2px;
+@selected: rgba(255, 255, 255, 0.15); // selected background color
+@selected-border: rgba(85,181,219,0.9);
+@selected-line: rgba(255, 255, 255, 0.03);
+
+// HTML
+@tag: @cyan;
+@tag-entity: @blue;
+@element-attr: @green;
+@class: @blue;
+@id: @blue;
+@block: @blue;
+@inline: lighten(@blue, 25%);
+
+@entity-function: @blue;
+@brackets: darken(@code-font-color, 30%);
+@punctuation: darken(@code-font-color, 30%);
+
+@search-bg: transparent;
+@search-border: solid 1px @blue;
+
+@search-active-bg: @blue;
+@search-active-border: solid 1px @blue;
+
+@search-item-border: @blue;
+@search-item-bg: @red;
+
+
+
+// Config -----------------------------------
+@syntax-hue:          230;
+@syntax-saturation:   16%;
+@syntax-brightness:   15%;
+
+
+// Monochrome -----------------------------------
+@mono-1: hsl(@syntax-hue, 5%, 84%); // default text
+@mono-2: hsl(@syntax-hue,  9%, 55%);
+@mono-3: hsl(@syntax-hue, 10%, 40%);
+
+// Colors -----------------------------------
+@hue-1:   #00bfff; // <-cyan
+@hue-2:   #008aff; // <-blue
+@hue-3:   #db84f4; // <-purple
+@hue-4:   #6dba09; // <-green
+
+@hue-5:   #bb3322; // <-red 1
+@hue-5-2: #ff4c98; // <-red 2
+
+@hue-6:   #ffa500; // <-orange 1
+@hue-6-2: #ffee44; // <-orange 2
+
+
+// Base colors -----------------------------------
+@syntax-fg:     @mono-1;
+@syntax-bg:     @very-dark-gray;
+@syntax-gutter: darken(@syntax-fg, 26%);
+@syntax-guide:  fade(@syntax-fg, 15%);
+@syntax-accent: hsl(@syntax-hue, 100%, 66% );

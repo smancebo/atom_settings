@@ -1,0 +1,25 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "b420845a-1d5c-4bfd-bb19-46377f58b6d5"
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax-dark"
+    ]
+  "exception-reporting":
+    userId: "17492884-cff6-ef41-9cac-e16f092af182"
+  "linter-flake8":
+    ignoreErrorCodes: [
+      "E251"
+    ]
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black: "#212121"
+        blue: "#5fa3cd"
+    style:
+      theme: "solid-colors"
+  welcome:
+    showOnStartup: false
