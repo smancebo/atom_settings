@@ -21,5 +21,6 @@
         blue: "#5fa3cd"
     style:
       theme: "solid-colors"
+  "tree-view": {}
   welcome:
     showOnStartup: false

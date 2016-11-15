@@ -19,3 +19,20 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # http://flight-manual.atom.io/using-atom/sections/basic-customization/#_cson
+
+'.text.html.basic':
+  'Translate':
+    'prefix': 'trl'
+    'body': '{{::(\'${1:TagName}\' | translate)}}'
+'.source.json':
+  'JSON Key':
+    'prefix': 'jkey'
+    'body': '\"${1:Key}\" : \"${2:Value}\",'
+
+'.source.js':
+  'JSON Key':
+    'prefix': 'jkey'
+    'body': '${1:Key} : \"${2:Value}\",'
+  'JSON Object':
+    'prefix': 'jobject'
+    'body': '{${1:Key} : \"${2:Value}\"}'
