@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+    "module": "commonjs",
+    "noLib": false,
+    "outDir": "../dist",
+    "preserveConstEnums": true,
+    "reactNamespace": "dom",
+    "skipLibCheck": true,
+    "sourceMap": false,
+    "strict": true,
+    "target": "es6"
+  },
+  "compileOnSave": true
+}

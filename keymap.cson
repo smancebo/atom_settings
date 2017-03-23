@@ -33,3 +33,6 @@
 'atom-worksoace atom-text-editor:not([mini])' :
   'shift-alt-up' : 'editor:add-selection-above'
   'shift-alt-down' : 'editor:add-selection-below'
+
+'atom-text-editor[data-grammar="source ts"]:not([mini])':
+    'tab': 'emmet:expand-abbreviation-with-tab'
