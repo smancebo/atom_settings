@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
+        "raw": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
-        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
+        "rawSpec": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
+        "spec": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50259-1pnro1c"
+      "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/apm-install-dir-117012-880-gal49p"
     ]
   ],
-  "_from": "../d-116108-50259-12o5l3r/package.tgz",
-  "_id": "dracula-theme@1.2.8",
+  "_from": "../d-117012-880-1riohdr/package.tgz",
+  "_id": "dracula-theme@2.0.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/dracula-theme",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
+    "raw": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
-    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
+    "rawSpec": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
+    "spec": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116108-50259-12o5l3r/package.tgz",
-  "_shasum": "ab92915935faa93cc79bd49f36c0c83b2ec1b1d8",
+  "_resolved": "file:../d-117012-880-1riohdr/package.tgz",
+  "_shasum": "0dbf3cfa5e3df2efbd3480488cf6d547f24c974c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50259-12o5l3r/package.tgz",
-  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50259-1pnro1c",
+  "_spec": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/d-117012-880-1riohdr/package.tgz",
+  "_where": "/private/var/folders/mb/vbb8rm8n0q1f21v6dnfs9y5w0000gp/T/apm-install-dir-117012-880-gal49p",
   "bugs": {
     "url": "https://github.com/dracula/atom/issues"
   },
@@ -43,7 +43,7 @@
   "description": "A dark theme for Atom",
   "devDependencies": {},
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "homepage": "https://github.com/dracula/atom#readme",
   "license": "MIT",
@@ -56,5 +56,5 @@
     "url": "git+https://github.com/dracula/atom.git"
   },
   "theme": "syntax",
-  "version": "1.2.8"
+  "version": "2.0.0"
 }

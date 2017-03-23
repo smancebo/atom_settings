@@ -15,10 +15,173 @@ _Note: Gaps between patch versions are faulty, broken or test releases._
 
 See the [Babel Changelog](https://github.com/babel/babel/blob/master/CHANGELOG.md) for the pre-6.8.0 version Changelog.
 
+## 6.15.0 (2017-01-10)
+
+### :eyeglasses: Spec Compliancy
+
+Add support for Flow shorthand import type ([#267](https://github.com/babel/babylon/pull/267)) (Jeff Morrison)
+
+This change implements flows new shorthand import syntax
+and where previously you had to write this code:
+
+```js
+import {someValue} from "blah";
+import type {someType} from "blah";
+import typeof {someOtherValue} from "blah";
+```
+
+you can now write it like this:
+
+```js
+import {
+  someValue,
+  type someType,
+  typeof someOtherValue,
+} from "blah";
+```
+
+For more information look at [this](https://github.com/facebook/flow/pull/2890) pull request.
+
+flow: allow leading pipes in all positions ([#256](https://github.com/babel/babylon/pull/256)) (Vladimir Kurchatkin)
+
+This change now allows a leading pipe everywhere types can be used:
+```js
+var f = (x): | 1 | 2 => 1;
+```
+
+Throw error when exporting non-declaration ([#241](https://github.com/babel/babylon/pull/241)) (Kai Cataldo)
+
+Previously babylon parsed the following exports, although they are not valid:
+```js
+export typeof foo;
+export new Foo();
+export function() {};
+export for (;;);
+export while(foo);
+```
+
+### :bug: Bug Fix
+
+Don't set inType flag when parsing property names ([#266](https://github.com/babel/babylon/pull/266)) (Vladimir Kurchatkin)
+
+This fixes parsing of this case:
+
+```js
+const map = {
+  [age <= 17] : 'Too young'
+};
+```
+
+Fix source location for JSXEmptyExpression nodes (fixes #248) ([#249](https://github.com/babel/babylon/pull/249)) (James Long)
+
+The following case produced an invalid AST
+```js
+<div>{/* foo */}</div>
+```
+
+Use fromCodePoint to convert high value unicode entities ([#243](https://github.com/babel/babylon/pull/243)) (Ryan Duffy)
+
+When high value unicode entities (e.g. 💩) were used in the input source code they are now correctly encoded in the resulting AST.
+
+Rename folder to avoid Windows-illegal characters ([#281](https://github.com/babel/babylon/pull/281)) (Ryan Plant)
+
+Allow this.state.clone() when parsing decorators ([#262](https://github.com/babel/babylon/pull/262)) (Alex Rattray)
+
+### :house: Internal
+
+User external-helpers ([#254](https://github.com/babel/babylon/pull/254)) (Daniel Tschinder)
+
+Add watch script for dev ([#234](https://github.com/babel/babylon/pull/234)) (Kai Cataldo)
+
+Freeze current plugins list for "*" option, and remove from README.md ([#245](https://github.com/babel/babylon/pull/245)) (Andrew Levine)
+
+Prepare tests for multiple fixture runners. ([#240](https://github.com/babel/babylon/pull/240)) (Daniel Tschinder)
+
+Add some test coverage for decorators stage-0 plugin ([#250](https://github.com/babel/babylon/pull/250)) (Andrew Levine)
+
+Refactor tokenizer types file ([#263](https://github.com/babel/babylon/pull/263)) (Sven SAULEAU)
+
+Update eslint-config-babel to the latest version 🚀 ([#273](https://github.com/babel/babylon/pull/273)) (greenkeeper[bot])
+
+chore(package): update rollup to version 0.41.0 ([#272](https://github.com/babel/babylon/pull/272)) (greenkeeper[bot])
+
+chore(package): update flow-bin to version 0.37.0 ([#255](https://github.com/babel/babylon/pull/255)) (greenkeeper[bot])
+
+## 6.14.1 (2016-11-17)
+
+### :bug: Bug Fix
+
+Allow `"plugins": ["*"]` ([#229](https://github.com/babel/babylon/pull/229)) (Daniel Tschinder)
+
+```js
+{
+  "plugins": ["*"]
+}
+```
+
+Will include all parser plugins instead of specifying each one individually. Useful for tools like babel-eslint, jscodeshift, and ast-explorer.
+
+## 6.14.0 (2016-11-16)
+
+### :eyeglasses: Spec Compliancy
+
+Throw error for reserved words `enum` and `await` ([#195](https://github.com/babel/babylon/pull/195)) (Kai Cataldo)
+
+[11.6.2.2 Future Reserved Words](http://www.ecma-international.org/ecma-262/6.0/#sec-future-reserved-words)
+
+Babylon will throw for more reserved words such as `enum` or `await` (in strict mode).
+
+```
+class enum {} // throws
+class await {} // throws in strict mode (module)
+```
+
+Optional names for function types and object type indexers ([#197](https://github.com/babel/babylon/pull/197)) (Gabe Levi)
+
+So where you used to have to write
+
+```js
+type A = (x: string, y: boolean) => number;
+type B = (z: string) => number;
+type C = { [key: string]: number };
+```
+
+you can now write (with flow 0.34.0)
+
+```js
+type A = (string, boolean) => number;
+type B = string => number;
+type C = { [string]: number };
+```
+
+Parse flow nested array type annotations like `number[][]` ([#219](https://github.com/babel/babylon/pull/219)) (Bernhard Häussner)
+ 
+Supports these form now of specifying array types:
+
+```js
+var a: number[][][][];
+var b: string[][];
+```
+ 
+### :bug: Bug Fix
+
+Correctly eat semicolon at the end of `DelcareModuleExports` ([#223](https://github.com/babel/babylon/pull/223))  (Daniel Tschinder)
+
+```
+declare module "foo" { declare module.exports: number } 
+declare module "foo" { declare module.exports: number; }  // also allowed now
+```
+
+### :house: Internal
+
+ * Count Babel tests towards Babylon code coverage ([#182](https://github.com/babel/babylon/pull/182)) (Moti Zilberman)
+ * Fix strange line endings ([#214](https://github.com/babel/babylon/pull/214)) (Thomas Grainger)
+ * Add node 7 (Daniel Tschinder)
+ * chore(package): update flow-bin to version 0.34.0 ([#204](https://github.com/babel/babylon/pull/204)) (Greenkeeper)
 
 ## v6.13.1 (2016-10-26)
 
-### 💅 Polish
+### :nail_care: Polish
 
 - Use rollup for bundling to speed up startup time ([#190](https://github.com/babel/babylon/pull/190)) ([@drewml](https://github.com/DrewML))
 
@@ -40,7 +203,7 @@ With that test case, there was a ~95ms savings by removing the need for node to 
 
 ## v6.13.0 (2016-10-21)
 
-### 👓 Spec Compliancy
+### :eyeglasses: Spec Compliancy
 
 Property variance type annotations for Flow plugin ([#161](https://github.com/babel/babylon/pull/161)) (Sam Goldman)
 
@@ -98,7 +261,7 @@ Fixes two tests that are failing after the merge of #172 ([#177](https://github.
 
 ## v6.12.0 (2016-10-14)
 
-### 👓 Spec Compliancy
+### :eyeglasses: Spec Compliancy
 
 Implement import() syntax ([#163](https://github.com/babel/babylon/pull/163)) (Jordan Gensler)
 
