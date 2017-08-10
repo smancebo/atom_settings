@@ -11,20 +11,21 @@ export class TypescriptBuffer {
   changedAtBatch: number = 0
 
   // Promise that resolves to the correct client for this filePath
-  clientPromise: Promise<Client>
+  private clientPromise?: Promise<Client>
 
   // Flag that signifies if tsserver has an open view of this file
   isOpen: boolean
 
   private events = new EventEmitter()
   private subscriptions = new CompositeDisposable()
+  private filePath: string
 
   constructor(
     public buffer: TextBuffer.ITextBuffer,
-    public getClient: (filePath: string) => Promise<Client>
+    public getClient: (filePath: string) => Promise<Client>,
   ) {
     this.subscriptions.add(buffer.onDidChange(this.onDidChange))
-    this.subscriptions.add(buffer.onDidChangePath(this.onDidSave))
+    this.subscriptions.add(buffer.onDidChangePath(this.onDidChangePath))
     this.subscriptions.add(buffer.onDidDestroy(this.dispose))
     this.subscriptions.add(buffer.onDidSave(this.onDidSave))
     this.subscriptions.add(buffer.onDidStopChanging(this.onDidStopChanging))
@@ -33,23 +34,21 @@ export class TypescriptBuffer {
   }
 
   async open() {
-    const filePath = this.buffer.getPath()
+    this.filePath = this.buffer.getPath()
 
-    if (isTypescriptFile(filePath)) {
+    if (isTypescriptFile(this.filePath)) {
       // Set isOpen before we actually open the file to enqueue any changed events
       this.isOpen = true
 
-      this.clientPromise = this.getClient(filePath)
+      this.clientPromise = this.getClient(this.filePath)
       const client = await this.clientPromise
 
       await client.executeOpen({
-        file: filePath,
-        fileContent: this.buffer.getText()
+        file: this.filePath,
+        fileContent: this.buffer.getText(),
       })
 
       this.events.emit("opened")
-    } else {
-      this.clientPromise = Promise.reject(new Error("Missing filePath or not a Typescript file"))
     }
   }
 
@@ -72,19 +71,21 @@ export class TypescriptBuffer {
     }
   }
 
-  dispose = () => {
+  dispose = async () => {
     this.subscriptions.dispose()
 
-    if (this.isOpen) {
-      this.clientPromise.then(client =>
-        client.executeClose({file: this.buffer.getPath()}))
+    if (this.isOpen && this.clientPromise) {
+      const client = await this.clientPromise
+      client.executeClose({file: this.buffer.getPath()})
+      this.events.emit("closed", this.filePath)
     }
   }
 
-  on(name: "saved", callback: () => any): this // saved after waiting for any pending changes
-  on(name: "opened", callback: () => any): this // the file is opened
-  on(name: "changed", callback: () => any): this // tsserver view of the file has changed
-  on(name: string, callback: () => any): this {
+  on(name: "saved", callback: () => void): this // saved after waiting for any pending changes
+  on(name: "opened", callback: () => void): this // the file is opened
+  on(name: "closed", callback: (filePath: string) => void): this // the file is closed
+  on(name: "changed", callback: () => void): this // tsserver view of the file has changed
+  on(name: string, callback: () => void): this {
     this.events.on(name, callback)
     return this
   }
@@ -93,10 +94,20 @@ export class TypescriptBuffer {
     this.changedAt = Date.now()
   }
 
+  onDidChangePath = async (newPath: string) => {
+    if (this.clientPromise && this.filePath) {
+      const client = await this.clientPromise
+      client.executeClose({file: this.filePath})
+      this.events.emit("closed", this.filePath)
+    }
+
+    this.open()
+  }
+
   onDidSave = async () => {
     // Check if there isn't a onDidStopChanging event pending.
     const {changedAt, changedAtBatch} = this
-    if (changedAt && changedAt > changedAtBatch) {
+    if (changedAt && changedAtBatch && changedAt > changedAtBatch) {
       await new Promise(resolve => this.events.once("changed", resolve))
     }
 
@@ -105,7 +116,7 @@ export class TypescriptBuffer {
 
   onDidStopChanging = async ({changes}: {changes: any[]}) => {
     // Don't update changedAt or emit any events if there are no actual changes or file isn't open
-    if (changes.length === 0 || !this.isOpen) {
+    if (changes.length === 0 || !this.isOpen || !this.clientPromise) {
       return
     }
 
@@ -119,7 +130,7 @@ export class TypescriptBuffer {
 
       const end = {
         endLine: start.row + oldExtent.row + 1,
-        endOffset: (oldExtent.row === 0 ? start.column + oldExtent.column: oldExtent.column) + 1
+        endOffset: (oldExtent.row === 0 ? start.column + oldExtent.column : oldExtent.column) + 1,
       }
 
       await client.executeChange({

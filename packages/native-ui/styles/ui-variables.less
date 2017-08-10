@@ -76,7 +76,7 @@
 
 @btn-base-color:                      #f4f4f4;
 
-@tab-bar-border-color:                #999799;
+@tab-bar-border-color:                hsl(0, 0, 55%);
 @tab-bar-border-color-transparent:    rgba(0, 0, 0, 0.3);
 @tab-background-color:                darken(#fff, 30%);
 @tab-bar-background-color:            @tab-background-color;
@@ -98,6 +98,7 @@
 
 @tree-view-background-color:          #eee;
 @tree-view-border-color:              @tab-bar-border-color-transparent;
+@background-tree-view: linear-gradient(to right, @base-background-color, darken(@base-background-color, 5%));
 
 @ui-site-color-1: @background-color-success; // green
 @ui-site-color-2: @background-color-info; // blue
@@ -123,6 +124,10 @@
 
 @tab-height: 24px;
 
+// Make it possible to convert pixel to relative units
+@html-font-size: unit(@font-size); // Your base font-size in pixels
+@em: @html-font-size * 1em; // Shorthand for outputting ems, e.g. "12/@em"
+@rem: @html-font-size * 1rem; // Shorthand for outputting ems, e.g. "12/@rem"
 
 // Other
 

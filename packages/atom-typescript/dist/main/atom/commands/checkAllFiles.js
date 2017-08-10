@@ -12,7 +12,7 @@ registry_1.commands.set("typescript:check-all-files", deps => {
         const client = yield deps.getClient(file);
         const projectInfo = yield client.executeProjectInfo({
             file,
-            needFileNameList: true
+            needFileNameList: true,
         });
         const files = new Set(projectInfo.body.fileNames);
         const max = files.size;
@@ -44,3 +44,4 @@ registry_1.commands.set("typescript:check-all-files", deps => {
         }
     });
 });
+//# sourceMappingURL=checkAllFiles.js.map

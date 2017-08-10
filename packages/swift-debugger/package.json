@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117423-89877-1e78dbo.f2adh7iudi"
+    ]
+  ],
+  "_from": "../d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+  "_id": "swift-debugger@0.1.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/swift-debugger",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+  "_shasum": "7f841aee79075bd914900b8e738d7d8f0b051ea8",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117423-89877-1bjvqhc.dk943d6lxr/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117423-89877-1e78dbo.f2adh7iudi",
+  "activationCommands": {
+    "atom-workspace": [
+      "swift-debugger:toggle",
+      "swift-debugger:breakpoint"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/aciidb0mb3r/atom-swift-debugger/issues"
+  },
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.0"
+  },
+  "description": "Develop and Debug swift projects",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/aciidb0mb3r/atom-swift-debugger#readme",
+  "keywords": [
+    "swift",
+    "develop swift",
+    "debug swift",
+    "swift package manager",
+    "lldb"
+  ],
+  "license": "MIT",
+  "main": "./lib/swift-debugger",
+  "name": "swift-debugger",
+  "optionalDependencies": {},
+  "readme": "# Swift-Debugger package\n\nA Swift Debugger Package for Atom!\n\n## Shortcuts\nalt-r to hide/show the debugger view\n\nalt-shift-r to toggle breakpoints at the current line\n\n## How to use\n\n### Install using APM\n```\n$ apm install swift-debugger language-swift\n```\n`language-swift` package provides syntax highlighting\n\n### Create a project\n```\n$ mkdir MySwiftProject && touch MySwiftProject/main.swift && touch MySwiftProject/Package.swift\n```\n\n### Open the folder in atom\n```\n$ atom MySwiftProject\n```\n\n###Give name to the swift package, Enter this in Package.swift\n```objc\nimport PackageDescription\n\nlet package = Package(\n    name: \"MySwiftProject\"\n)\n```\n\n###Enter some sample code in main.swift \n```objc \nlet myAwesomeString = \"hey I am an awesome string\"\nprint(myAwesomeString)\nlet awesomeInt = 500\nprint(awesomeInt)\n```\n\n### Press alt-r to open the debugger\n\n![Swift Debugger](https://cdn-images-1.medium.com/max/1600/1*ZhoyYtvLzQhvCMjhtlpFxQ.png)\n\n###Set executable and swift path for debugger\n\nEnter this in the input box of the debugger\n`e=MySwiftProject` (press enter)\n`p=/home/aciid/swift/swift-2.2-SNAPSHOT-2015–12–01-b-ubuntu15.10/usr/bin` (press enter)\nDebugger will print: \"swift path set\" and \"executable path set\" respectively\n\n###Press \"run\" to build and run the code\n![](https://cdn-images-1.medium.com/max/1600/1*G1w5YyDLhYfHWCynDD7p0A.png)\n\n###alt-shift-r to toggle breakpoint at the current line\n![](https://cdn-images-1.medium.com/max/1600/1*6ji_E4xS2rswKuTStTmqYQ.png)\n\nAfter toggling the breakpoint, press run and then enter `p myAwesomeString` to print the object\n\nMore tutorial:\nhttps://medium.com/@Aciid/hacking-atom-to-create-a-swift-ide-that-runs-on-linux-and-mac-c7d9520a0fac#.etzoon43j\n\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aciidb0mb3r/atom-swift-debugger.git"
+  },
+  "version": "0.1.2"
+}

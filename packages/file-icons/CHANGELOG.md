@@ -3,6 +3,274 @@ Change Log
 All notable changes to the project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+[Unpublished]: https://github.com/file-icons/atom/compare/v2.1.10...HEAD
+
+
+[v2.1.10] - 2017-08-06
+----------------------
+### Added
+- **New icons:** Cairo, Codacy (`.codacy.yml`), Corel (`.cmx`, `.ccx`), CorelDRAW (`.cdr`, `.cdrx`, `.cdt`), Firebase Bolt (`.bolt`), Ghostscript, GIMP (`.xcf`, `.ggr`, `.gih`, `.vbr`), Graphite, HewlettPackard (`.hpgl`), Inkscape, OpenCV, Pipenv (`Pipfile`, `Pipfile.lock`), TortoiseSVN (`.tgitconfig`)
+- **Support:** Apache (`httpd{.+}*.conf`), Eagle (`.eup`), Generic code (`.sk`, `.sk{1,2}`), Images (`.cgm`, `.fig`, `.wmf`, `.emf`, `.wmz`, `.apm`, `.xwd`), KiCad (`.kicad_pcb-bak`, `.kicad_mod`, `.kicad_wks`, `fp-lib-table`), LLVM (`ubsan.blacklist`), MarkdownLint (`.mdlrc`, `.mdlrc.style.rb`), Moustache (`*.stache`), nginx (`nginx{.+}*.conf`), Printed Circuit Boards (`.pcb`, `.gbr`, `.gtl`, `.gbl`, `.gbs`, `.gto`, `.gts`, `.gtp`, `.gbo`, `.gbp`, `.drl`, `.dsn`, `.fab`, `.gko`, `.gpt`, `.gpb`, `.net`, `.pho`, `.{g,gm}[0-9]+`), Text (`.dri`, `.gpi`, `.rpt`), XML Page Specification (`.xps`)
+
+### Changed
+- Eagle icon replaced by generic circuit-board for `.brd` (Board) and `.sch` (Schematic) files.
+- MarkdownLint icon reduced in scale slightly
+
+[v2.1.10]: https://github.com/file-icons/atom/releases/tag/v2.1.10
+
+
+
+[v2.1.9] - 2017-07-16
+---------------------
+### Added
+- **New icons:** Atoum (`.atoum.php`), Behat (`behat.yml`), CPAN (`cpanfile`, `MANIFEST.SKIP`, `META.{yml,json}`), cURL (`.curlrc`), Flask (`flask{.*}.py`), Pod (`.pod`), tmux (`.tmux.conf`)
+- **Support:** C (`.xpm`), Generic code (`.cgi`, `.fcgi`), Images (`.xwd`), Jest (`jest.config.js`), Maps (`.map`), Mercurial (`.hgignore`, `.hgrc`, `.hgsub`, `.hgsubstate`), Perl (`.al`), Shell-scripts (`.mksh`, `.pdksh`), Tagfiles (`.hgtags`, `localtags`), TypeScript tests (`*.{spec|test}.{ts,tsx}`), Unit tests (`t/*.sh`, `t/*.t`, `.xspec`), Visual Studio (`.njsproj`)
+- `.tdy` and `.tidy` to ignored file-extensions, used by [perltidy(1)][pltidy].
+
+### Changed
+- Perl icon changed to use the Perl onion
+- [[`#627`][]]: Swift icons now orange-coloured instead of green
+
+[v2.1.9]: https://github.com/file-icons/atom/releases/tag/v2.1.9
+[pltidy]: http://perltidy.sourceforge.net/perltidy.html#examples
+[`#627`]: https://github.com/file-icons/atom/issues/627
+
+
+
+[v2.1.8] - 2017-06-26
+---------------------
+### Added
+- **New icons:** Closure Template (`.soy`), EasyBuild (`.eb`), Ring (`.ring`), Solidity (`.sol`, `.solidity`)
+
+### Fixed
+- [[`#610`][]]: Exception thrown on Windows when opening `archive-view`
+- [[`#616`][]]: Webpack icon not shown for filenames containing dashes
+- [[`#618`][]]: Unexplained TypeError thrown for outdated Atom installs
+
+[v2.1.8]: https://github.com/file-icons/atom/releases/tag/v2.1.8
+[`#610`]: https://github.com/file-icons/atom/issues/610
+[`#616`]: https://github.com/file-icons/atom/issues/616
+[`#618`]: https://github.com/file-icons/atom/issues/618
+
+
+
+[v2.1.7] - 2017-05-31
+---------------------
+### Added
+- **New icons:** Browserslist (updated version), Junos (`.jos`), Telegram (`.tl`), Visio (`.vdw`, `.vdx`, `.vrd`, `.vsd`, `.vsdm`, `.vsdx`, `.vsl`, `.vss`, `.vssm`, `.vssx`, `.vst`, `.vstm`, `.vstx`, `.vsw`, `.vsx`, `.vtx`)
+- **Support:** FlowType (`.flow`), Jest (`.jsx.snap`), NodeJS (`BUNDLED_NODE_VERSION`)
+
+### Fixed
+- [[`#606`][]]: Wrong icon shown for TypeScript executables
+
+[v2.1.7]: https://github.com/file-icons/atom/releases/tag/v2.1.7
+[`#606`]: https://github.com/file-icons/atom/issues/606
+
+
+
+[v2.1.6] - 2017-05-18
+---------------------
+### Added
+- **New icons:** Browserslist (`browserslist`, `.browserslistrc`), Dragula (`dragula.{js,css}`), Moment (`moment.js`), Moment Timezone (`moment-timezone.js`)
+- **Support:** Docker (`.docker` directories), jQuery (`jquery.slim.js`)
+
+### Fixed
+- Tab-icons squashed by [`atom/one-light-ui#100`](https://github.com/atom/one-light-ui/pull/100)
+
+[v2.1.6]: https://github.com/file-icons/atom/releases/tag/v2.1.6
+
+
+[v2.1.5] - 2017-05-13
+---------------------
+### Added
+- **New icons:** Edge (`.edge`), Firebase (`.firebaserc`, `firebase.json`), GLSL (`.glsl`, `.glslv`, `.gsh`, `.gshader`), Vertex/Fragment Shader (`.fp`, `.frag`, `.frg`, `.fsh`, `.fshader`, `.vert`, `.vertex`, `.vrx`, `.vsh`), SketchUp LayOut (`.layout`), SketchUp Make (`.skp`), SketchUp Style Builder (`.style`), WebGL (`.webgl`)
+- **Support:** 3D Asset (`.comp`, `.geo{m,metry}`, `.tesc`, `.tese`), ChartJS (`chart.{bundle,min}.js`), NPM (`package-lock.json`)
+
+[v2.1.5]: https://github.com/file-icons/atom/releases/tag/v2.1.5
+
+
+
+[v2.1.4] - 2017-04-26
+---------------------
+### Added
+- **New icons:** Jolie (`.ol`, `.iol`), Nano (`.nanorc`), PegJS (`.pegjs`, `.pegcoffee`), Xamarin (`.workbook`)
+- **Support:** 3D Assets (`.cginc`, `.shader`), Circle CI (`.circleci` directories), Jest (`.js.snap`), Markdown (`.mdwn`), Python (`.pyi`), Visual Studio (`.vsixmanifest`, `.vstemplate`)
+
+### Fixed
+- [[`#559`][]]: Occasional error thrown when opening `fuzzy-finder`
+- [[`#586`][]]: Classes not removed when disposing of `addIconToElement` disposable
+- [[`#590`][]]: Unhandled exception thrown from [`project-plus`][`Tabs`] fix.
+
+[v2.1.4]: https://github.com/file-icons/atom/releases/tag/v2.1.4
+[`#559`]: https://github.com/file-icons/atom/issues/559
+[`#586`]: https://github.com/file-icons/atom/issues/586
+[`#590`]: https://github.com/file-icons/atom/issues/590
+
+
+
+[v2.1.3] - 2017-04-13
+---------------------
+### Added
+- **New icons:** BinTray (`.bintray.json`), Brotli (`.br`), DOM, MJML (`.mjml`), NASM (`.nasm`), NXC (`.nxc`), WebAssembly (`.wasm`, `.wast`, `.wat`), Yasm
+- **Support:** Stylelint (`.stylelintcache`), Webpack (`webpack.*.conf`)
+
+### Fixed
+- [[`#580`][]]: Obscure conflict with [`tree-view-autoresize`](https://github.com/lexcast/tree-view-autoresize) package
+- [[`#581`][]]: Errors thrown when opening remote directories containing a `.gitattributes` file
+
+[v2.1.3]: https://github.com/file-icons/atom/releases/tag/v2.1.3
+[`#580`]: https://github.com/file-icons/atom/issues/580
+[`#581`]: https://github.com/file-icons/atom/issues/581
+
+
+
+[v2.1.2] - 2017-03-30
+---------------------
+### Fixed
+- [[`#568`][]]: Exception thrown when installing package
+- [[`#571`][]]: Test-icons not applied to files in test-folder subdirectories
+
+[v2.1.2]: https://github.com/file-icons/atom/releases/tag/v2.1.2
+[`#568`]: https://github.com/file-icons/atom/issues/568
+[`#571`]: https://github.com/file-icons/atom/issues/571
+
+
+[v2.1.1] - 2017-03-22
+---------------------
+Replaced scoped dependency with [unscoped and republished version](https://www.npmjs.com/package/alhadis.utils).
+
+An `apm` bug with handling scoped NPM modules [`#702`](https://github.com/atom/apm/issues/702) blocked [v2.1.0][] from submission to [atom.io](https://atom.io/packages/file-icons).
+
+[v2.1.1]: https://github.com/file-icons/atom/releases/tag/v2.1.1
+
+
+
+[v2.1.0] - 2017-03-21
+---------------------
+### Added
+- **New icons:** Alex (`.alexrc`, `.alexignore`), Antwar (`antwar.{conf|config}.`), CodeShip (`codeship-*.yml`), MarkdownLint (`.markdownlintrc`), PM2 (`ecosystem.{config|conf}.*`), Proselint (`.proselintrc`), Tests folder (unassigned), Test-files (CoffeeScript, Generic code, JavaScript, Perl, Python, React/JSX/TSX, Ruby, and TypeScript) (`{spec|test}/*.{spec|test}.{js|rb|pl…}`), Webpack (updated logo)
+- **Support:** GitLab (`.gitlab`), Jinja2 (`.j2`), Karma (`karma.config.*`), Protractor (`protractor.config.*`), SourcePawn (`.inc`), Stylus (`.stylus`), Webpack (`webpack.conf.*`)
+
+### Changed
+- Filesystem APIs moved to [a dedicated repository](https://github.com/Alhadis/Atom-FS) for further development. Users should continue to report errors to `file-icons` as normal.
+- Webpack icon updated to use [official branding][Webpack-Logo]. The old icon is retained at [`U+E91E`](https://github.com/file-icons/source/blob/master/charmap.md#E91E).
+
+### Fixed
+- Character maps, borked by some recent change to GitHub Markdown's HTML-parsing
+
+[v2.1.0]:       https://github.com/file-icons/atom/releases/tag/v2.1.0
+[Webpack-Logo]: https://github.com/webpack/webpack.js.org/blob/7370b06/assets/icon-square-big.svg
+
+
+
+[2.0.17] - 2017-03-01
+---------------------
+### Added
+- **New icons:** ESDoc (`esdoc.json`), JSONT (`.jsont`), Twine (`.tw`), and Phoenix (`phoenix.{ex,js}`)
+- **Support:** PostCSS (`.postcssrc.{js,json,yaml}`)
+- Commands to toggle package settings: `file-icons:toggle-changed-only`, `file-icons:toggle-tab-icons` (no default keybindings).
+
+### Fixed
+- [[`#550`][]]: Icons still displayed in tabs after disabling `tabPaneIcon` setting
+- [[`#550`][]]: Switching projects in [`project-plus`][+stahp] broke connection with `tree-view` entries. Files quit refreshing and directories reverted to default-icons.
+- [`Tabs`][] not clearing memory when switching projects in [`project-plus`][+stahp].
+
+[2.0.17]: https://github.com/file-icons/atom/releases/tag/v2.0.17
+[`Tabs`]: https://github.com/file-icons/atom/commit/b3051db1d
+[+stahp]: https://atom.io/packages/project-plus
+[`#550`]: https://github.com/file-icons/atom/issues/550
+
+
+[2.0.16] - 2017-02-27
+---------------------
+### Added
+- **New icons:** AngelScript (`.acs`, `.angelscript`), Bazel (`.bzl`, `BUILD`, `WORKSPACE`), BEM (`.bemjson.js`), Caddy (`Caddyfile`), DeviceTree (`.dts`, `.dtsi`), Franca (`.fdl`, `.fidl`, `.fdepl`), Jison (`.jison`, `.jisonlex`), Meson (`meson.build`, `meson_options.txt`), MiniZinc (`.mzn`, `.dzn`), Miranda (`.m`), Nanoc (`.nanoc.yaml`), P4 (`.p4`), Watchman (`.watchmanconfig`, `watchman.json`)
+- **Support:** Generic code (`.bc`, `.dtd`, `.fo`, `.fidl`, `.stellaris`, `.spthy`, `.wlp4`), Markdown (`.gfm`, `.pfm`)
+
+[2.0.16]: https://github.com/file-icons/atom/releases/tag/v2.0.16
+
+
+[2.0.15] - 2017-02-08
+---------------------
+### Added
+- **New icons:** ABIF (`.abif`, `.ab1`, `.fsa`), EJS (`.ejs`), Hoplon (`.hl`), KiCad (`.kicad_pcb`), Mercurial (`.hg`), PlatformIO (`platformio.ini`), Polymer (`polymer.json`), Rhino3D (`.3dm`, `.rvb`), VirtualBox (`.vbox`), VMware (`.vmdk,` `.nvram`, `.vmsd`, `.vmsn`, `.vmss`, `.vmtm`, `.vmx`, `.vmxf`)
+- **Support:** LookML (`.lkml`), SQL (`.hql`)
+
+### Fixed
+- [[`#537`][], [`#540`][]] Errors thrown for [`atom-svn`](https://atom.io/packages/svn) and [`atom-ng`](https://atom.io/packages/atom-hg) users
+- [[`#541`][]] Certain filenames replacing `.tpl` icons
+- `linguist-language` strategy not working on Windows
+- Missing cache and repository icons on Windows. Seriously this time.
+- Icons not cleared from memory when closing `find-and-replace`
+
+[2.0.15]: https://github.com/file-icons/atom/releases/tag/v2.0.15
+[`#537`]: https://github.com/file-icons/atom/issues/537
+[`#540`]: https://github.com/file-icons/atom/issues/540
+[`#541`]: https://github.com/file-icons/atom/issues/541
+
+
+[2.0.14] - 2017-02-03
+---------------------
+### Added
+- **33 new icons:** Ansible, Aurelia, bitHound, Brunch, Buck, Bundler, CakePHP (updated logo), Chef, COBOL, CodeKit, Delphi, Doclets, DoneJS, Drone, GitLab, HaxeDevelop, Jasmine, Jest, KitchenCI, Lerna, Lime, Microsoft InfoPath, Nuclide, Octave, PHPUnit, Redux, RSpec, Sequelize, Shipit, Shippable, Swagger, Template Toolkit, Twig
+- **Support:** Blade (`.blade`), Erlang (`Emakefile`), GraphViz (`.plantuml`, `.iuml`, `.puml`, `.pu`), Jekyll (`_config.yml`, `.nojekyll`), MkDocs (`mkdocs.yml`), Paket (Various `paket.*` configs, `.paket` folders), Process IDs (`.pid`), Puppet (`.epp`), Tcl (`.exp`), Terminal (`.profile`), Visual Studio (`.vscodeignore`, `.vsix`, `.vssettings.json`, `.vscode` folders), Yarn (`.yarnrc`, `.yarn-metadata.json`, `.yarn-integrity`, `.yarnclean`), WeChat (`.wxml`, `.wxss`)
+
+### Fixed
+- __Icon config:__ Incorrect priority levels assigned to certain icons
+- __Icon config:__ Icon names not fuzzed when generating alias pattern
+- Submodule icons not showing in tree-view
+- Missing repo icons in projects that were opened through a symlink
+- Certain path separators not normalised on Windows; likely solves [`#528`][]
+
+[2.0.14]: https://github.com/file-icons/atom/releases/tag/v2.0.14
+[`#528`]: https://github.com/file-icons/atom/issues/528
+
+
+[2.0.13] - 2017-01-28
+---------------------
+### Added
+- **Support:** Gear (`.htmlhintrc`), NodeJS (`.node`)
+
+### Fixed
+- [[`#528`][]] Deleted files not cleared from memory on Windows
+- [[`#530`][]] Error thrown after deactivating package
+- Errors thrown when deactivating/reactivating package
+
+[2.0.13]: https://github.com/file-icons/atom/releases/tag/v2.0.13
+[`#528`]: https://github.com/file-icons/atom/issues/528
+[`#530`]: https://github.com/file-icons/atom/issues/530
+
+
+[2.0.12] - 2017-01-24
+---------------------
+### Fixed
+- Regression introduced in 2.0.11 for Nuclide users
+
+[2.0.12]: https://github.com/file-icons/atom/releases/tag/v2.0.12
+
+
+[2.0.11] - 2017-01-24
+---------------------
+### Fixed
+- [[`#525`][]] Breakage at startup on Windows
+
+[2.0.11]: https://github.com/file-icons/atom/releases/tag/v2.0.11
+[`#525`]: https://github.com/file-icons/atom/issues/525
+
+
+[2.0.10] - 2017-01-20
+---------------------
+### Fixed
+- [[`#502`][]] Sporadic breakage with fixing tab-classes
+- [[`#518`][]] Repo icons missing on Windows
+- [[`#519`][]] Error thrown at startup or when installed
+- Icon cache resetting between sessions on Windows
+
+[2.0.10]: https://github.com/file-icons/atom/releases/tag/v2.0.10
+[`#502`]: https://github.com/file-icons/atom/issues/502
+[`#518`]: https://github.com/file-icons/atom/issues/518
+[`#519`]: https://github.com/file-icons/atom/issues/519
+
 
 [2.0.9] - 2017-01-13
 --------------------
@@ -12,6 +280,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#514`][]] Breakage if `document.styleSheets` is null
 - Submodule icons not showing
 
+[2.0.9]:  https://github.com/file-icons/atom/releases/tag/v2.0.9
 [`#497`]: https://github.com/file-icons/atom/issues/497
 [`#509`]: https://github.com/file-icons/atom/issues/509
 [`#514`]: https://github.com/file-icons/atom/issues/514
@@ -29,6 +298,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#505`][]] Wrong icons used for certain `.tpl` files
 - [[`#506`][]] Error thrown when changing project paths in Nuclide
 
+[2.0.8]:  https://github.com/file-icons/atom/releases/tag/v2.0.8
 [`#471`]: https://github.com/file-icons/atom/issues/471#issuecomment-271532231
 [`#501`]: https://github.com/file-icons/atom/issues/501
 [`#505`]: https://github.com/file-icons/atom/issues/505
@@ -43,6 +313,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - [[`#494`][]] Tree-view hidden at startup (for real this time)
 - Breakage if creating file with name matching a deleted folder
 
+[2.0.7]:  https://github.com/file-icons/atom/releases/tag/v2.0.7
 [`#492`]: https://github.com/file-icons/atom/issues/492
 [`#493`]: https://github.com/file-icons/atom/issues/493
 [`#494`]: https://github.com/file-icons/atom/issues/494
@@ -51,6 +322,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 [2.0.6] - 2017-01-04
 --------------------
 Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
+
+[2.0.6]:  https://github.com/file-icons/atom/releases/tag/v2.0.6
 
 
 [2.0.5] - 2017-01-04
@@ -61,6 +334,7 @@ Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
 - [[`#489`][]] Wrong icon used for Dockerfiles
 - [[`#491`][]] Error thrown for empty pathname
 
+[2.0.5]:  https://github.com/file-icons/atom/releases/tag/v2.0.5
 [`#481`]: https://github.com/file-icons/atom/issues/481
 [`#483`]: https://github.com/file-icons/atom/issues/483
 [`#489`]: https://github.com/file-icons/atom/issues/489
@@ -73,6 +347,7 @@ Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
 - [[`#478`][]] Occasional breakage opening `tree-view` on Arch Linux
 - Icons reverted when changing certain `tree-view` settings
 
+[2.0.4]:  https://github.com/file-icons/atom/releases/tag/v2.0.4
 [`#478`]: https://github.com/file-icons/atom/issues/478
 
 
@@ -81,12 +356,10 @@ Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
 ### Added
 - Icon service to [enable integration with third-party packages][served].
 
-### Removed
-- Use of Atom's built-in icon service.
-
 ### Fixed
 - [[`#476`][]] Exception thrown deserialising external file-paths
 
+[2.0.3]:  https://github.com/file-icons/atom/releases/tag/v2.0.3
 [`#476`]: https://github.com/file-icons/atom/issues/470
 [served]: https://github.com/file-icons/atom#integration-with-other-packages
 
@@ -105,6 +378,7 @@ Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
 ### Currently working on
 - [[`#471`][]] Icons not showing in Nuclide file-tree
 
+[2.0.2]:  https://github.com/file-icons/atom/releases/tag/v2.0.2
 [`#470`]: https://github.com/file-icons/atom/issues/470
 [`#471`]: https://github.com/file-icons/atom/issues/471
 [`#472`]: https://github.com/file-icons/atom/issues/472
@@ -116,6 +390,8 @@ Updated URLs to use new GitHub [organisation](https://github.com/file-icons).
 --------------------
 Fixed breakage at startup when run on Windows.
 
+[2.0.1]:  https://github.com/file-icons/atom/releases/tag/v2.0.1
+
 
 [2.0.0] - 2016-12-30
 --------------------
@@ -125,18 +401,20 @@ Fixed breakage at startup when run on Windows.
 - **New icons:** ArtText (`.artx` folders), Electron, FFmpeg, GN (`.gn`, `.gni`), ICU, libuv, Ninja (`.ninja`), Nodemon (`nodemon.json`, `.nodemonignore`), Rascal (`.rsc`), V8
 - **Support:** HTML (`.vash`, `.xhtml`), Source maps (`.css.map`, `.js.map`)
 
+[2.0.0]:  https://github.com/file-icons/atom/releases/tag/v2.0.0
+
 
 [1.7.25] - 2016-11-13
 ---------------------
 ### Added
 - **New icons:** Rollup (new logo), SilverStripe (`.ss`)
-- [[`435769b`]]: Copies of Octicons noticeably affected by Atom 1.13's [upgrade to Octicons 4.4.0]: `Settings`, `Dashboard`, `Tag`, `Terminal`, `Video`
-
-[`435769b`]: https://github.com/file-icons/source/commit/435769bbc5d14f11352d9c633a60ebd5d3cf2142
-[upgrade to Octicons 4.4.0]: https://github.com/atom/atom/pull/13138
+- [[`435769b`][]]: Copies of Octicons noticeably affected by Atom 1.13's [upgrade to Octicons 4.4.0](https://github.com/atom/atom/pull/13138): `Settings`, `Dashboard`, `Tag`, `Terminal`, `Video`
 
 ### Changed
 - `.ss` files no longer associated with Scheme
+
+[1.7.25]:    https://github.com/file-icons/atom/releases/tag/v1.7.25
+[`435769b`]: https://github.com/file-icons/source/commit/435769bbc5d14f11352d9c633a60ebd5d3cf2142
 
 
 [1.7.24] - 2016-11-03
@@ -148,12 +426,16 @@ Fixed breakage at startup when run on Windows.
 ### Changed
 - Solid-filled icons now used for `.js`, `.jsx`, `.ts` and `.tsx` files
 
+[1.7.24]: https://github.com/file-icons/atom/releases/tag/v1.7.24
+
 
 [1.7.23] - 2016-10-27
 ---------------------
 ### Added
 - **New icon:** EditorConfig (`.editorconfig`)
 - **Support:** Bower Rails (`Bowerfile`), Docker Compose (`.docker-compose.*`), Docker Sync (`docker-sync.yml`), Gear (`.lintstagedrc`), OpenType feature files (`.fea`), PostCSS (`.postcssrc`, `postcss.config.js`), Zsh (`.antigen`, `.zpreztorc`)
+
+[1.7.23]: https://github.com/file-icons/atom/releases/tag/v1.7.23
 
 
 [1.7.22] - 2016-10-14
@@ -162,10 +444,10 @@ Fixed breakage at startup when run on Windows.
 - **New icons:** Glyphs (`.glyphs`), Yarn (`yarn.lock`)
 
 ### Fixed
-- [[`#435`](https://github.com/file-icons/atom/issues/435)] Icon of [`markdown-preview`] misaligned after reloading
+- [[`#435`](https://github.com/file-icons/atom/issues/435)] Icon of [`markdown-preview`](https://github.com/atom/markdown-preview) misaligned after reloading
 - [[`#437`](https://github.com/file-icons/atom/issues/437)] Ambiguous wording of package settings
 
-[`markdown-preview`]: https://github.com/atom/markdown-preview
+[1.7.22]: https://github.com/file-icons/atom/releases/tag/v1.7.22
 
 
 [1.7.21] - 2016-10-12
@@ -177,6 +459,8 @@ Fixed breakage at startup when run on Windows.
 ### Fixed
 - [[`#429`](https://github.com/file-icons/atom/issues/429)] Tab-icon colours not obeying value of user's _"Changed only"_ setting.
 
+[1.7.21]: https://github.com/file-icons/atom/releases/tag/v1.7.21
+
 
 [1.7.20] - 2016-10-04
 ---------------------
@@ -186,6 +470,8 @@ Fixed breakage at startup when run on Windows.
 
 ### Changed
 - Pug icon improved; previous icon retained at [`U+E9D0`](https://github.com/file-icons/source/blob/master/charmap.md#E9D0)
+
+[1.7.20]: https://github.com/file-icons/atom/releases/tag/v1.7.20
 
 
 [1.7.19] - 2016-08-28
@@ -197,6 +483,8 @@ Fixed breakage at startup when run on Windows.
 ### Changed
 - Updated icons in readme's preview image
 
+[1.7.19]: https://github.com/file-icons/atom/releases/tag/v1.7.19
+
 
 [1.7.18] - 2016-08-05
 ---------------------
@@ -206,6 +494,8 @@ Fixed breakage at startup when run on Windows.
 
 ### Changed
 - `.x` files now use Objective-C icon
+
+[1.7.18]: https://github.com/file-icons/atom/releases/tag/v1.7.18
 
 
 [1.7.17] - 2016-07-14
@@ -220,6 +510,8 @@ Fixed breakage at startup when run on Windows.
 ### Fixed
 - [[`#400`](https://github.com/file-icons/atom/issues/400)] Laravel icon too small in Atom Material UI
 
+[1.7.17]: https://github.com/file-icons/atom/releases/tag/v1.7.17
+
 
 [1.7.16] - 2016-07-05
 ---------------------
@@ -230,6 +522,8 @@ Fixed breakage at startup when run on Windows.
 ### Changed
 - New procedure for adding icons - a [separate repository](https://github.com/file-icons/source) now manages the package's icon-font.
 Contributors should take heed of the new [submission process](https://github.com/file-icons/source#adding-new-icons).
+
+[1.7.16]: https://github.com/file-icons/atom/releases/tag/v1.7.16
 
 
 [1.7.15] - 2016-06-17
@@ -244,6 +538,8 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#390`](https://github.com/file-icons/atom/issues/390)] Directory icons now respect user's *"Colour only when changed"* setting
 
+[1.7.15]: https://github.com/file-icons/atom/releases/tag/v1.7.15
+
 
 [1.7.14] - 2016-06-10
 ---------------------
@@ -254,6 +550,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Stylus icon changed to use the logotype's first letter, [as per Stylus's favicon](http://stylus-lang.com/favicon.ico). The previous icon is still included at codepoint `\E9F7`.
 
+[1.7.14]: https://github.com/file-icons/atom/releases/tag/v1.7.14
 
 
 [1.7.13] - 2016-05-30
@@ -269,8 +566,10 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - `CMakeLists.txt` no longer replaced with standard text-file icon
 
+[1.7.13]: https://github.com/file-icons/atom/releases/tag/v1.7.13
 
-[1.7.12 - 2016-05-21]
+
+[1.7.12] - 2016-05-21
 ---------------------
 ### Added
 - **New icons:** Adobe CC (After Effects, InDesign, Premiere), APL, Blank page, C# Cake, C#-Script, Csound, Cucumber/Gherkin, dBASE, Finder, Keynote, Microsoft Office (Access, Excel, OneNote, PowerPoint, Word), NAnt, OpenOffice, Protractor, Storyist, Strings, Typings, Wavefront OBJ, ZBrush
@@ -286,8 +585,10 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Horizontal alignment of symlinks and zip-files
 
+[1.7.12]: https://github.com/file-icons/atom/releases/tag/v1.7.12
 
-[1.7.11 - 2016-05-10]
+
+[1.7.11] - 2016-05-10
 ---------------------
 ### Added
 - **New icons:** Julia, SQLite
@@ -301,8 +602,10 @@ Contributors should take heed of the new [submission process](https://github.com
 - Alignment and advance widths of Docker, Gradle, Groovy, Lisp, R, and Vue icons
 - PDF files now respect value of user's "Coloured" setting
 
+[1.7.11]: https://github.com/file-icons/atom/releases/tag/v1.7.11
 
-[1.7.10 - 2016-05-07]
+
+[1.7.10] - 2016-05-07
 ---------------------
 ### Added
 - **Support:** APL (`.apl.history`), Binary (`.swp`), Config files (`.apl.ascii`), Manual pages (`mmn`, `mmt`, `tmac.`), Stylelint (`.stylelintignore`)
@@ -311,8 +614,10 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#352`](https://github.com/file-icons/atom/issues/352)] Reverted fix for modified files with yellow icons
 - Babel icon now shows for all `.babel` files
 
+[1.7.10]: https://github.com/file-icons/atom/releases/tag/v1.7.10
 
-[1.7.9 - 2016-05-05]
+
+[1.7.9] - 2016-05-05
 --------------------
 ### Added
 - **New icons:** Brakeman, CakePHP, Code Climate, Hack, Jenkins, Karma, Minecraft, New Relic, NuGet, PowerShell, Pug, SBT, Scrutinizer, Service Fabric, Shopify, Thor, TSX (React/Typescript), Vagrant
@@ -329,8 +634,10 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#341`](https://github.com/file-icons/atom/issues/341)] Yellow icons no longer share same colour as modification indicator
 - `.eslintrc.js` files are no longer overridden by JS icon
 
+[1.7.9]: https://github.com/file-icons/atom/releases/tag/v1.7.9
 
-[1.7.8 - 2016-04-28]
+
+[1.7.8] - 2016-04-28
 --------------------
 ### Added
 - **New icons:** Cabal, eC, MuPAD, OOC, Opa, OpenEdge ABL, Ox, Oxygene, Oz, Pan, Papyrus, Parrot, PAWN, Pickle, Pike, PogoScript, Pony, POV-Ray SDL, Propeller Spin, Puppet, PureBasic, PureScript, Racket, RDoc, REALbasic/Xojo, Rebol, Red, reStructuredText, RobotFramework, Sage, Scheme, Scilab, Self, Shen, Slash, SQF, Stan, Stata, SuperCollider, SystemVerilog, Textile, TextMate, Turing, TXL, Uno, UnrealScript, UrWeb, Varnish, VHDL, X10, XMOS, XPages, Xtend, Zephir, Zimpl
@@ -344,8 +651,10 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Removed
 - Dropped support for Graph Modelling Language; its extension conflicts with GameMaker Language (`.gml`)
 
+[1.7.8]: https://github.com/file-icons/atom/releases/tag/v1.7.8
 
-[1.7.7 - 2016-04-24]
+
+[1.7.7] - 2016-04-24
 --------------------
 ### Added
 - **New icons:** AMX, Inno Setup, Jupyter, Kotlin, KRL, LabVIEW, Lasso, Lean, LSL, Logtalk, LookML, Mako, Matlab, Max, Mercury, Metal, Mirah, Modula-2, Monkey-X, NetLogo, Nimrod, Nit, Nix, NSIS, NumPy, Objective-J, OpenCL, Processing, Sublime Text
@@ -353,6 +662,8 @@ Contributors should take heed of the new [submission process](https://github.com
 
 ### Fixed
 - [[`#336`](https://github.com/file-icons/atom/issues/336)] Errors thrown for users of the [`sublime-panes`](https://atom.io/packages/sublime-panes) package
+
+[1.7.7]: https://github.com/file-icons/atom/releases/tag/v1.7.7
 
 
 [1.7.6] - 2016-04-22
@@ -365,6 +676,8 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#331`](https://github.com/file-icons/atom/issues/331)] Generic config icon now used for `.conf` files instead of nginx logo
 - [[`#199`](https://github.com/file-icons/atom/issues/199)] Python icon is now blue instead of orange
 - Visual Basic files now distinguished by Visual Studio icon
+
+[1.7.6]: https://github.com/file-icons/atom/releases/tag/v1.7.6
 
 
 [1.7.5] - 2016-04-20
@@ -381,6 +694,8 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Height of `.meteor` folders
 
+[1.7.5]: https://github.com/file-icons/atom/releases/tag/v1.7.5
+
 
 [1.7.4] - 2016-04-18
 --------------------
@@ -391,6 +706,8 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#296`](https://github.com/file-icons/atom/issues/296)] Material UI resets size adjustments applied to icons
 
+[1.7.4]: https://github.com/file-icons/atom/releases/tag/v1.7.4
+
 
 [1.7.3] - 2016-04-17
 --------------------
@@ -400,6 +717,8 @@ Contributors should take heed of the new [submission process](https://github.com
 
 ### Fixed
 - `_osc` and `PKGBUILD` icons now show icons correctly
+
+[1.7.3]: https://github.com/file-icons/atom/releases/tag/v1.7.3
 
 
 [1.7.2] - 2016-04-14
@@ -413,6 +732,8 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#193`](https://github.com/file-icons/atom/issues/193)] Tab icons now update when changing file extensions
 - [[`#316`](https://github.com/file-icons/atom/issues/316)] Newly-saved files now display icons in tab
 
+[1.7.2]: https://github.com/file-icons/atom/releases/tag/v1.7.2
+
 
 [1.7.1] - 2016-04-05
 --------------------
@@ -424,6 +745,8 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#310`](https://github.com/file-icons/atom/issues/310)] Go icon replaced with something clearer
 - [[`#311`](https://github.com/file-icons/atom/issues/311)] Lowercase `makefile` no longer matches any filename
 - Changelog now displays properly in Atom's Markdown preview
+
+[1.7.1]: https://github.com/file-icons/atom/releases/tag/v1.7.1
 
 
 [1.7.0] - 2016-04-02
@@ -441,6 +764,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Bright colours and faint icons now adjust for users of light-coloured themes
 - Dark red/maroon are brightened for users of darker themes
 
+[1.7.0]: https://github.com/file-icons/atom/releases/tag/v1.7.0
 
 
 [1.6.21] - 2016-04-01
@@ -449,6 +773,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Babel, Marko, Webpack
 - **Support:** `.pug` files (Jade)
 
+[1.6.21]: https://github.com/file-icons/atom/releases/tag/v1.6.21
 
 
 [1.6.20] - 2016-03-31
@@ -459,6 +784,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Colour is now applied to Ruby manifests and Git/NPM-related config files
 
+[1.6.20]: https://github.com/file-icons/atom/releases/tag/v1.6.20
 
 
 [1.6.19] - 2016-03-26
@@ -469,11 +795,15 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#271`](https://github.com/file-icons/atom/issues/271)] Tab icons misaligned in files opened by Remote-Edit
 
+[1.6.19]: https://github.com/file-icons/atom/releases/tag/v1.6.19
+
 
 [1.6.18] - 2016-03-06
 ---------------------
 ### Fixed
 - [[`#296`](https://github.com/file-icons/atom/issues/296)] Riot tag too large in Atom Material theme's tree view
+
+[1.6.18]: https://github.com/file-icons/atom/releases/tag/v1.6.18
 
 
 [1.6.17] - 2016-03-01
@@ -485,6 +815,8 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#284`](https://github.com/file-icons/atom/issues/284)] Pattern matching used for task runner config files
 - [[`#246`](https://github.com/file-icons/atom/issues/246)] Text-file icons not showing in Flatland Dark UI theme
+
+[1.6.17]: https://github.com/file-icons/atom/releases/tag/v1.6.17
 
 
 [1.6.16] - 2016-02-27
@@ -499,6 +831,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Composer and Haml icons replaced with silhouetted versions
 - Java icon made slightly bolder
 
+[1.6.16]: https://github.com/file-icons/atom/releases/tag/v1.6.16
 
 
 [1.6.15] - 2016-02-22
@@ -515,6 +848,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Extension of PowerShell modules (`.psm1`)
 
+[1.6.15]: https://github.com/file-icons/atom/releases/tag/v1.6.15
 
 
 [1.6.14] - 2016-01-19
@@ -528,6 +862,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#239`](https://github.com/file-icons/atom/issues/239)] Bottom border of inactive tabs hidden/incomplete
 - [[`#248`](https://github.com/file-icons/atom/issues/248)] Incorrect alignment/centring of React/JSX icon
 
+[1.6.14]: https://github.com/file-icons/atom/releases/tag/v1.6.14
 
 
 [1.6.13] - 2015-12-01
@@ -544,7 +879,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Removed
 - `iconsxd`, `fontcustom` and `latex` fonts
 
-
+[1.6.13]: https://github.com/file-icons/atom/releases/tag/v1.6.13
 
 
 [1.6.12] - 2015-11-20
@@ -559,6 +894,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Vertical alignment of Node icon
 
+[1.6.12]: https://github.com/file-icons/atom/releases/tag/v1.6.12
 
 
 [1.6.11] - 2015-10-19
@@ -572,6 +908,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - SVG icon now drawn from Mfizz font instead of IcoMoon
 - Colour of Scala icon changed from green to red
 
+[1.6.11]: https://github.com/file-icons/atom/releases/tag/v1.6.11
 
 
 [1.6.10] - 2015-10-11
@@ -580,6 +917,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Boot, ClojureScript, Elm, Leiningen, SVG
 - **Support:** `.gitconfig`, `.gitignore_global`, `.gitkeep`, `.rake`
 
+[1.6.10]: https://github.com/file-icons/atom/releases/tag/v1.6.10
 
 
 [1.6.8] - 2015-08-26
@@ -591,6 +929,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Images with uppercased file extensions are now recognised
 
+[1.6.8]: https://github.com/file-icons/atom/releases/tag/v1.6.8
 
 
 [1.6.7] - 2015-08-21
@@ -600,6 +939,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Colours of Sass/SCSS icons changed to pink to reflect product logo
 - Docker icons now applied to files named `Dockerfile` (e.g., `Dockerfile.name`)
 
+[1.6.7]: https://github.com/file-icons/atom/releases/tag/v1.6.7
 
 
 [1.6.6] - 2015-08-19
@@ -607,6 +947,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **Support:** Iced CoffeeScript
 
+[1.6.6]: https://github.com/file-icons/atom/releases/tag/v1.6.6
 
 
 [1.6.5] - 2015-08-18
@@ -615,6 +956,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Graph (CSV/TSV files)
 - **Support:** `.babelrc`, `.babelignore`
 
+[1.6.5]: https://github.com/file-icons/atom/releases/tag/v1.6.5
 
 
 [1.6.3] - 2015-08-10
@@ -626,6 +968,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Colour of `.toml` icons easier to see on darker backgrounds
 - Cargo.toml no longer overridden by other .toml rules
 
+[1.6.3]: https://github.com/file-icons/atom/releases/tag/v1.6.3
 
 
 [1.6.1] - 2015-07-31
@@ -633,6 +976,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - Package setting to hide icons in file tabs
 
+[1.6.1]: https://github.com/file-icons/atom/releases/tag/v1.6.1
 
 
 [1.5.8] - 2015-06-24
@@ -640,6 +984,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **Support:** Cargo (`Cargo.lock`, `Cargo.toml`), IPython (`.ipy`)
 
+[1.5.8]: https://github.com/file-icons/atom/releases/tag/v1.5.8
 
 
 [1.5.7] - 2015-06-04
@@ -647,6 +992,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Vertical alignment of tab icons
 
+[1.5.7]: https://github.com/file-icons/atom/releases/tag/v1.5.7
 
 
 [1.5.6] - 2015-05-30
@@ -655,6 +1001,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** F#
 - **Support:** `.eex` (Elixir)
 
+[1.5.6]: https://github.com/file-icons/atom/releases/tag/v1.5.6
 
 
 [1.5.5] - 2015-05-03
@@ -666,6 +1013,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Prevent theme styling from italicising icons
 
+[1.5.5]: https://github.com/file-icons/atom/releases/tag/v1.5.5
 
 
 [1.5.4] - 2015-04-09
@@ -676,6 +1024,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Renamed `latex` CSS class to `tex`
 
+[1.5.4]: https://github.com/file-icons/atom/releases/tag/v1.5.4
 
 
 [1.5.3] - 2015-04-06
@@ -685,6 +1034,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** TemplateToolkit TT, SQL, LaTeX, BibTeX, Windows-specific files (BAT, CMD, EXE, COM, REG)
 - **Support:** `.ndjson`, Babel Gulpfiles
 
+[1.5.3]: https://github.com/file-icons/atom/releases/tag/v1.5.3
 
 
 [1.5.2] - 2015-03-24
@@ -697,6 +1047,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Renamed `stylesheets` directory to `styles` to comply with Atom 1.0 specs
 
+[1.5.2]: https://github.com/file-icons/atom/releases/tag/v1.5.2
 
 
 [1.5.1] - 2015-03-08
@@ -705,6 +1056,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New fonts:** `file-icons` for JSX and React icons
 - **New icons:** JSX, React
 
+[1.5.1]: https://github.com/file-icons/atom/releases/tag/v1.5.1
 
 
 [1.5.0] - 2015-02-28
@@ -714,6 +1066,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **Support:** Go templates, `.es6`
 - Package setting to limit icon colours only when file is modified
 
+[1.5.0]: https://github.com/file-icons/atom/releases/tag/v1.5.0
 
 
 [1.4.11] - 2015-02-16
@@ -721,6 +1074,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **New icons:** Assembly, Binary, Config (`.ini`, `.properties`, `.toml`)
 
+[1.4.11]: https://github.com/file-icons/atom/releases/tag/v1.4.11
 
 
 [1.4.10] - 2015-02-12
@@ -730,6 +1084,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Ionic, HAML
 - **Support:** `.jshintignore`, `.cjsx`
 
+[1.4.10]: https://github.com/file-icons/atom/releases/tag/v1.4.10
 
 
 [1.4.9] - 2015-02-09
@@ -740,6 +1095,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#103`](https://github.com/file-icons/atom/issues/103)] Tab icons for Settings and Release Notes disappearing
 
+[1.4.9]: https://github.com/file-icons/atom/releases/tag/v1.4.9
 
 
 [1.4.8] - 2015-01-19
@@ -747,6 +1103,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **Support:** D lang, Makefiles, `.config`, `.manifest`, `.psd1`, `.ps1m`, `.ps1xml`
 
+[1.4.8]: https://github.com/file-icons/atom/releases/tag/v1.4.8
 
 
 [1.4.7] - 2015-01-18
@@ -757,6 +1114,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Missing icons in file tabs
 
+[1.4.7]: https://github.com/file-icons/atom/releases/tag/v1.4.7
 
 
 [1.4.6] - 2015-01-15
@@ -767,6 +1125,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Updated minimum compatible Atom version to 0.171.0
 
+[1.4.6]: https://github.com/file-icons/atom/releases/tag/v1.4.6
 
 
 [1.4.5] - 2015-01-13
@@ -776,6 +1135,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Readded `_spec.rb` with green colouring
 - Update Devicons
 
+[1.4.5]: https://github.com/file-icons/atom/releases/tag/v1.4.5
 
 
 [1.4.4] - 2015-01-06
@@ -787,6 +1147,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Removed
 - `_spec.rb` now implemented as `.feature`
 
+[1.4.4]: https://github.com/file-icons/atom/releases/tag/v1.4.4
 
 
 [1.4.3] - 2014-12-18
@@ -795,6 +1156,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Travis
 - **Support:** Emblem.js templates, `.cxx`, `.cc`, `.hxx`
 
+[1.4.3]: https://github.com/file-icons/atom/releases/tag/v1.4.3
 
 
 [1.4.2] - 2014-11-03
@@ -806,6 +1168,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Size of JavaScript icons
 
+[1.4.2]: https://github.com/file-icons/atom/releases/tag/v1.4.2
 
 
 [1.4.1] - 2014-10-22
@@ -814,6 +1177,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** Composer.json, Laravel Blade, Sourcepawn
 - **Support:** Lua (generic code icon)
 
+[1.4.1]: https://github.com/file-icons/atom/releases/tag/v1.4.1
 
 
 [1.4.0] - 2014-10-16
@@ -821,6 +1185,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - Package settings to forcefully show icons and disable colours
 
+[1.4.0]: https://github.com/file-icons/atom/releases/tag/v1.4.0
 
 
 [1.3.6] - 2014-10-04
@@ -831,6 +1196,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Git-related files now use Git SCM logo instead of GitHub
 
+[1.3.6]: https://github.com/file-icons/atom/releases/tag/v1.3.6
 
 
 [1.3.5] - 2014-09-19
@@ -844,6 +1210,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - Image icons in tabs
 
+[1.3.5]: https://github.com/file-icons/atom/releases/tag/v1.3.5
 
 
 [1.3.4] - 2014-09-05
@@ -855,6 +1222,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Colour of Perl icons to a more appropriate blue
 
+[1.3.4]: https://github.com/file-icons/atom/releases/tag/v1.3.4
 
 
 [1.3.3] - 2014-08-25
@@ -864,6 +1232,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **Support:** `.mdown`, `.markdown`, `.mkd`, `.mkdown`, `.rmd`, `.ron`
 - Minor change to JavaScript icon's vertical alignment
 
+[1.3.3]: https://github.com/file-icons/atom/releases/tag/v1.3.3
 
 
 [1.3.2] - 2014-08-01
@@ -871,6 +1240,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#57`](https://github.com/file-icons/atom/issues/57)] Console error causing dev tools to open when reloading window
 
+[1.3.2]: https://github.com/file-icons/atom/releases/tag/v1.3.2
 
 
 [1.3.1] - 2014-08-01
@@ -878,8 +1248,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **New fonts:** `fontcustom` for Dockerfile icon
 - **New icons:** Dockerfile
-- **Support:** Stylus, ASP VB.net, `.gitmodules`, `.mailmap`,
-               `.npmrc`, `.hpp`, `.ipp`, `.mm`
+- **Support:** Stylus, ASP VB.net, `.gitmodules`, `.mailmap`, `.npmrc`, `.hpp`, `.ipp`, `.mm`
 - Readded Go icon with adjustments
 - Font smoothing to improve icon appearance on Mac OS
 
@@ -887,6 +1256,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - [[`#54`](https://github.com/file-icons/atom/issues/54)] Reverted CoffeeScript to use pre-1.3.0 icon
 - Reverted C and C++ files to use generic icons
 
+[1.3.1]: https://github.com/file-icons/atom/releases/tag/v1.3.1
 
 
 [1.3.0] - 2014-07-20
@@ -902,7 +1272,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Removed
 - Go icon (too faint)
 
-
+[1.3.0]: https://github.com/file-icons/atom/releases/tag/v1.3.0
 
 
 [1.2.6] - 2014-07-16
@@ -911,6 +1281,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **New icons:** CakePHP templates, Twitter/Bower files
 - **Support:** `.ejs`
 
+[1.2.6]: https://github.com/file-icons/atom/releases/tag/v1.2.6
 
 
 [1.2.5] - 2014-07-14
@@ -925,7 +1296,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - Node icon now used instead of NPM
 - Colour of Gruntfile.coffee icons now matches CoffeeScript colour
 
-
+[1.2.5]: https://github.com/file-icons/atom/releases/tag/v1.2.5
 
 
 [1.2.4] - 2014-06-29
@@ -933,6 +1304,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#30`](https://github.com/file-icons/atom/issues/30)] Text of active tab vertically misaligned
 
+[1.2.4]: https://github.com/file-icons/atom/releases/tag/v1.2.4
 
 
 [1.2.3] - 2014-06-28
@@ -945,6 +1317,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - `.npmignore` and `npm-debug.log` files now use NPM icon instead of gear
 
+[1.2.3]: https://github.com/file-icons/atom/releases/tag/v1.2.3
 
 
 [1.2.2] - 2014-06-25
@@ -956,6 +1329,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Character mappings for [1.1.0] icons
 
+[1.2.2]: https://github.com/file-icons/atom/releases/tag/v1.2.2
 
 
 [1.2.1] - 2014-06-24
@@ -963,6 +1337,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Added
 - **Support:** `Rakefile`, `.gemspec`, `Gemfile.lock`
 
+[1.2.1]: https://github.com/file-icons/atom/releases/tag/v1.2.1
 
 
 [1.2.0] - 2014-06-22
@@ -972,6 +1347,7 @@ Contributors should take heed of the new [submission process](https://github.com
 - **Support:** Opal Ruby, `.ruby-version`, `.ruby-gemset`
 - Icon support in file tabs
 
+[1.2.0]: https://github.com/file-icons/atom/releases/tag/v1.2.0
 
 
 [1.1.0] - 2014-06-08
@@ -982,6 +1358,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Icons are now specified with CSS only
 
+[1.1.0]: https://github.com/file-icons/atom/releases/tag/v1.1.0
 
 
 [1.0.2] - 2014-05-28
@@ -989,14 +1366,16 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Fixed
 - [[`#7`](https://github.com/file-icons/atom/issues/7)] Incorrectly-centred icons
 
+[1.0.2]: https://github.com/file-icons/atom/releases/tag/v1.0.2
 
 
 [1.0.1] - 2014-05-26
 --------------------
 ### Fixed
-- [[`#6`](https://github.com/file-icons/atom/issues/6)]:
-          Console error when opening a project in dev mode
+- [[`#6`][]]: Console error when opening a project in dev mode
 
+[1.0.1]: https://github.com/file-icons/atom/releases/tag/v1.0.1
+[`#6`]:  https://github.com/file-icons/atom/issues/6
 
 
 [1.0.0] - 2014-05-24
@@ -1008,6 +1387,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Moved colour and icon properties to different stylesheets
 
+[1.0.0]: https://github.com/file-icons/atom/releases/tag/v1.0.0
 
 
 [0.3.0] - 2014-04-14
@@ -1018,6 +1398,7 @@ Contributors should take heed of the new [submission process](https://github.com
 ### Changed
 - Regex to match file extensions with dashes (e.g., `.ruby-version`)
 
+[0.3.0]: https://github.com/file-icons/atom/releases/tag/v0.3.0
 
 
 [0.2.0] - 2014-03-27
@@ -1026,106 +1407,9 @@ Contributors should take heed of the new [submission process](https://github.com
 - Wrong CSS class name
 - Debugging feedback left in tree-view
 
+[0.2.0]: https://github.com/file-icons/atom/releases/tag/v0.2.0
 
 
 0.1.0 - 2014-03-27
 --------------------
 Initial release.
-
-
-[Unpublished]: https://github.com/file-icons/atom/compare/v2.0.9...HEAD
-[2.0.9]:  https://github.com/file-icons/atom/releases/tag/v2.0.9
-[2.0.8]:  https://github.com/file-icons/atom/releases/tag/v2.0.8
-[2.0.7]:  https://github.com/file-icons/atom/releases/tag/v2.0.7
-[2.0.6]:  https://github.com/file-icons/atom/releases/tag/v2.0.6
-[2.0.5]:  https://github.com/file-icons/atom/releases/tag/v2.0.5
-[2.0.4]:  https://github.com/file-icons/atom/releases/tag/v2.0.4
-[2.0.3]:  https://github.com/file-icons/atom/releases/tag/v2.0.3
-[2.0.2]:  https://github.com/file-icons/atom/releases/tag/v2.0.2
-[2.0.1]:  https://github.com/file-icons/atom/releases/tag/v2.0.1
-[2.0.0]:  https://github.com/file-icons/atom/releases/tag/v2.0.0
-[1.7.25]: https://github.com/file-icons/atom/releases/tag/v1.7.25
-[1.7.24]: https://github.com/file-icons/atom/releases/tag/v1.7.24
-[1.7.23]: https://github.com/file-icons/atom/releases/tag/v1.7.23
-[1.7.22]: https://github.com/file-icons/atom/releases/tag/v1.7.22
-[1.7.21]: https://github.com/file-icons/atom/releases/tag/v1.7.21
-[1.7.20]: https://github.com/file-icons/atom/releases/tag/v1.7.20
-[1.7.19]: https://github.com/file-icons/atom/releases/tag/v1.7.19
-[1.7.18]: https://github.com/file-icons/atom/releases/tag/v1.7.18
-[1.7.17]: https://github.com/file-icons/atom/releases/tag/v1.7.17
-[1.7.16]: https://github.com/file-icons/atom/releases/tag/v1.7.16
-[1.7.15]: https://github.com/file-icons/atom/releases/tag/v1.7.15
-[1.7.14]: https://github.com/file-icons/atom/releases/tag/v1.7.14
-[1.7.13]: https://github.com/file-icons/atom/releases/tag/v1.7.13
-[1.7.12]: https://github.com/file-icons/atom/releases/tag/v1.7.12
-[1.7.11]: https://github.com/file-icons/atom/releases/tag/v1.7.11
-[1.7.10]: https://github.com/file-icons/atom/releases/tag/v1.7.10
-[1.7.9]:  https://github.com/file-icons/atom/releases/tag/v1.7.9
-[1.7.8]:  https://github.com/file-icons/atom/releases/tag/v1.7.8
-[1.7.7]:  https://github.com/file-icons/atom/releases/tag/v1.7.7
-[1.7.6]:  https://github.com/file-icons/atom/releases/tag/v1.7.6
-[1.7.5]:  https://github.com/file-icons/atom/releases/tag/v1.7.5
-[1.7.4]:  https://github.com/file-icons/atom/releases/tag/v1.7.4
-[1.7.3]:  https://github.com/file-icons/atom/releases/tag/v1.7.3
-[1.7.2]:  https://github.com/file-icons/atom/releases/tag/v1.7.2
-[1.7.1]:  https://github.com/file-icons/atom/releases/tag/v1.7.1
-[1.7.0]:  https://github.com/file-icons/atom/releases/tag/v1.7.0
-[1.6.21]: https://github.com/file-icons/atom/releases/tag/v1.6.21
-[1.6.20]: https://github.com/file-icons/atom/releases/tag/v1.6.20
-[1.6.19]: https://github.com/file-icons/atom/releases/tag/v1.6.19
-[1.6.18]: https://github.com/file-icons/atom/releases/tag/v1.6.18
-[1.6.17]: https://github.com/file-icons/atom/releases/tag/v1.6.17
-[1.6.16]: https://github.com/file-icons/atom/releases/tag/v1.6.16
-[1.6.15]: https://github.com/file-icons/atom/releases/tag/v1.6.15
-[1.6.14]: https://github.com/file-icons/atom/releases/tag/v1.6.14
-[1.6.13]: https://github.com/file-icons/atom/releases/tag/v1.6.13
-[1.6.12]: https://github.com/file-icons/atom/releases/tag/v1.6.12
-[1.6.11]: https://github.com/file-icons/atom/releases/tag/v1.6.11
-[1.6.10]: https://github.com/file-icons/atom/releases/tag/v1.6.10
-[1.6.8]:  https://github.com/file-icons/atom/releases/tag/v1.6.8
-[1.6.7]:  https://github.com/file-icons/atom/releases/tag/v1.6.7
-[1.6.6]:  https://github.com/file-icons/atom/releases/tag/v1.6.6
-[1.6.5]:  https://github.com/file-icons/atom/releases/tag/v1.6.5
-[1.6.3]:  https://github.com/file-icons/atom/releases/tag/v1.6.3
-[1.6.1]:  https://github.com/file-icons/atom/releases/tag/v1.6.1
-[1.5.8]:  https://github.com/file-icons/atom/releases/tag/v1.5.8
-[1.5.7]:  https://github.com/file-icons/atom/releases/tag/v1.5.7
-[1.5.6]:  https://github.com/file-icons/atom/releases/tag/v1.5.6
-[1.5.5]:  https://github.com/file-icons/atom/releases/tag/v1.5.5
-[1.5.4]:  https://github.com/file-icons/atom/releases/tag/v1.5.4
-[1.5.3]:  https://github.com/file-icons/atom/releases/tag/v1.5.3
-[1.5.2]:  https://github.com/file-icons/atom/releases/tag/v1.5.2
-[1.5.1]:  https://github.com/file-icons/atom/releases/tag/v1.5.1
-[1.5.0]:  https://github.com/file-icons/atom/releases/tag/v1.5.0
-[1.4.11]: https://github.com/file-icons/atom/releases/tag/v1.4.11
-[1.4.10]: https://github.com/file-icons/atom/releases/tag/v1.4.10
-[1.4.9]:  https://github.com/file-icons/atom/releases/tag/v1.4.9
-[1.4.8]:  https://github.com/file-icons/atom/releases/tag/v1.4.8
-[1.4.7]:  https://github.com/file-icons/atom/releases/tag/v1.4.7
-[1.4.6]:  https://github.com/file-icons/atom/releases/tag/v1.4.6
-[1.4.5]:  https://github.com/file-icons/atom/releases/tag/v1.4.5
-[1.4.4]:  https://github.com/file-icons/atom/releases/tag/v1.4.4
-[1.4.3]:  https://github.com/file-icons/atom/releases/tag/v1.4.3
-[1.4.2]:  https://github.com/file-icons/atom/releases/tag/v1.4.2
-[1.4.1]:  https://github.com/file-icons/atom/releases/tag/v1.4.1
-[1.4.0]:  https://github.com/file-icons/atom/releases/tag/v1.4.0
-[1.3.6]:  https://github.com/file-icons/atom/releases/tag/v1.3.6
-[1.3.5]:  https://github.com/file-icons/atom/releases/tag/v1.3.5
-[1.3.4]:  https://github.com/file-icons/atom/releases/tag/v1.3.4
-[1.3.3]:  https://github.com/file-icons/atom/releases/tag/v1.3.3
-[1.3.2]:  https://github.com/file-icons/atom/releases/tag/v1.3.2
-[1.3.1]:  https://github.com/file-icons/atom/releases/tag/v1.3.1
-[1.3.0]:  https://github.com/file-icons/atom/releases/tag/v1.3.0
-[1.2.6]:  https://github.com/file-icons/atom/releases/tag/v1.2.6
-[1.2.5]:  https://github.com/file-icons/atom/releases/tag/v1.2.5
-[1.2.4]:  https://github.com/file-icons/atom/releases/tag/v1.2.4
-[1.2.3]:  https://github.com/file-icons/atom/releases/tag/v1.2.3
-[1.2.2]:  https://github.com/file-icons/atom/releases/tag/v1.2.2
-[1.2.1]:  https://github.com/file-icons/atom/releases/tag/v1.2.1
-[1.2.0]:  https://github.com/file-icons/atom/releases/tag/v1.2.0
-[1.1.0]:  https://github.com/file-icons/atom/releases/tag/v1.1.0
-[1.0.2]:  https://github.com/file-icons/atom/releases/tag/v1.0.2
-[1.0.1]:  https://github.com/file-icons/atom/releases/tag/v1.0.1
-[1.0.0]:  https://github.com/file-icons/atom/releases/tag/v1.0.0
-[0.3.0]:  https://github.com/file-icons/atom/releases/tag/v0.3.0
-[0.2.0]:  https://github.com/file-icons/atom/releases/tag/v0.2.0

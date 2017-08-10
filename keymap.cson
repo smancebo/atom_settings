@@ -35,4 +35,7 @@
   'shift-alt-down' : 'editor:add-selection-below'
 
 'atom-text-editor[data-grammar="source ts"]:not([mini])':
-    'tab': 'emmet:expand-abbreviation-with-tab'
+    'cmd-e': 'emmet:expand-abbreviation-with-tab'
+
+'atom-text-editor[data-grammar="text html basic"]:not([mini])':
+    'cmd-e': 'emmet:expand-abbreviation-with-tab'

@@ -23,6 +23,7 @@ class StatusBar extends View
     @subscriptions = new CompositeDisposable()
 
     @subscriptions.add atom.commands.add 'atom-workspace',
+      'platformio-ide-terminal:focus': => @focusTerminal()
       'platformio-ide-terminal:new': => @newTerminalView()
       'platformio-ide-terminal:toggle': => @toggle()
       'platformio-ide-terminal:next': =>
@@ -60,6 +61,7 @@ class StatusBar extends View
       else if item.constructor.name is "TextEditor"
         mapping = atom.config.get('platformio-ide-terminal.core.mapTerminalsTo')
         return if mapping is 'None'
+        return unless item.getPath()
 
         switch mapping
           when 'File'
@@ -70,9 +72,8 @@ class StatusBar extends View
         prevTerminal = @getActiveTerminalView()
         if prevTerminal != nextTerminal
           if not nextTerminal?
-            if item.getTitle() isnt 'untitled'
-              if atom.config.get('platformio-ide-terminal.core.mapTerminalsToAutoOpen')
-                nextTerminal = @createTerminalView()
+            if atom.config.get('platformio-ide-terminal.core.mapTerminalsToAutoOpen')
+              nextTerminal = @createTerminalView()
           else
             @setActiveTerminalView(nextTerminal)
             nextTerminal.toggle() if prevTerminal?.panel.isVisible()
@@ -99,7 +100,7 @@ class StatusBar extends View
     handleFocus = =>
       if @returnFocus
         setTimeout =>
-          @returnFocus?.focus()
+          @returnFocus?.focus(true)
           @returnFocus = null
         , 100
 
@@ -145,6 +146,12 @@ class StatusBar extends View
       pane.onDidDestroy -> tabBar.off 'drop', @onDropTabBar
 
   createTerminalView: (autoRun) ->
+    shell = atom.config.get 'platformio-ide-terminal.core.shell'
+    shellArguments = atom.config.get 'platformio-ide-terminal.core.shellArguments'
+    args = shellArguments.split(/\s+/g).filter (arg) -> arg
+    @createEmptyTerminalView autoRun, shell, args
+
+  createEmptyTerminalView: (autoRun=[], shell = null, args = []) ->
     @registerPaneSubscription() unless @paneSubscription?
 
     projectFolder = atom.project.getPaths()[0]
@@ -167,10 +174,6 @@ class StatusBar extends View
 
     id = editorPath or projectFolder or home
     id = filePath: id, folderPath: path.dirname(id)
-
-    shell = atom.config.get 'platformio-ide-terminal.core.shell'
-    shellArguments = atom.config.get 'platformio-ide-terminal.core.shellArguments'
-    args = shellArguments.split(/\s+/g).filter (arg) -> arg
 
     statusIcon = new StatusIcon()
     platformIOTerminalView = new PlatformIOTerminalView(id, pwd, statusIcon, this, shell, args, autoRun)
@@ -209,6 +212,14 @@ class StatusBar extends View
   getActiveTerminalView: ->
     return @activeTerminal
 
+  focusTerminal: ->
+    return unless @activeTerminal?
+
+    if terminal = PlatformIOTerminalView.getFocusedTerminal()
+        @activeTerminal.blur()
+    else
+        @activeTerminal.focusTerminal()
+
   getTerminalById: (target, selector) ->
     selector ?= (terminal) -> terminal.id
 
@@ -232,6 +243,11 @@ class StatusBar extends View
     if view?
       return callback(view)
     return null
+
+  runNewTerminal: () ->
+    @activeTerminal = @createEmptyTerminalView()
+    @activeTerminal.toggle()
+    return @activeTerminal
 
   runCommandInNewTerminal: (commands) ->
     @activeTerminal = @createTerminalView(commands)

@@ -2,40 +2,39 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
-        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50649-185ru94"
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117710-40942-gv7mfx.1y7vfv42t9"
     ]
   ],
-  "_from": "../d-116108-50649-w38v9c/package.tgz",
-  "_id": "dark-bint-syntax@0.8.9",
+  "_from": "../d-117710-40942-1689nca.530t4ndn29/package.tgz",
+  "_id": "dark-bint-syntax@0.10.0",
   "_inCache": true,
-  "_installable": true,
   "_location": "/dark-bint-syntax",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
-    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116108-50649-w38v9c/package.tgz",
-  "_shasum": "5dbf378b189fcb8c3374673cd02d112bb976bd61",
+  "_resolved": "file:../d-117710-40942-1689nca.530t4ndn29/package.tgz",
+  "_shasum": "09188a0f3d094266c45e26fb0a4cf52074478d19",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50649-w38v9c/package.tgz",
-  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50649-185ru94",
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117710-40942-1689nca.530t4ndn29/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117710-40942-gv7mfx.1y7vfv42t9",
   "author": {
     "name": "Murriouz",
     "email": "Murriouz@gmail.com"
@@ -63,5 +62,15 @@
     "url": "git+https://github.com/Murriouz/dark-bint-syntax.git"
   },
   "theme": "syntax",
-  "version": "0.8.9"
+  "version": "0.10.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
 }

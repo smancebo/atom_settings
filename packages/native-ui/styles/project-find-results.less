@@ -1,155 +1,72 @@
-ul.list-tree.matches > li.search-result.list-item {
-  padding-left: 0; // align with file type icon
+.preview-pane .preview-header {
+  padding: @component-padding * 2 @component-padding ;
+  font-size: 1.75em;
+  font-weight: bold;
+  background-color: @base-background-color;
+  font-family: @font-family-headlines;
+  border-bottom: none; // ow
+  width: 100%;
+  z-index: 1;
 
-  &:before {
-    content: '';
-    background-color: transparent;
-    position: absolute;
-    left: @component-padding + 1;
-    right: @component-padding + 1;
-    height: 25px;
-  }
-
-  &.selected:before {
-    left: @component-padding + 1;
-    right: @component-padding + 1;
-  }
-
-  &:hover:before {
-    background-color: @base-background-color;
-    cursor: pointer;
-  }
-
-  &:hover.selected {
-    &:before {
-      background-color: @base-background-color;
-    }
+  .preview-controls {
+    font-family: @font-family;
   }
 }
 
-.preview-pane .list-group .selected:before,
-.preview-pane .list-tree .selected:before {
-  left: @component-padding + 1;
-  right: @component-padding + 1;
-  // background-color: @base-background-color;
-}
+.results-view .list-tree > div {
+  background-color: @input-background-color;
+  border-bottom: 1px solid @base-border-color;
 
-
-
-.results-view li.search-result.list-item {
-  margin-left: 0;
-}
-
-
-
-ul.list-tree.matches {
-  &:hover {
-    cursor: pointer; // avoid cursor flashing between list items
+  &:first-child {
+    border-top: 1px solid @base-border-color;
   }
 }
 
-
-.preview-pane .results-view .line-number,
-.preview-pane .results-view .preview {
-  position: relative; // otherwise the :before will overlay the text
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.preview-pane .results-view .search-result {
+.results-view .list-tree.has-collapsable-children {
   padding: 0;
 }
 
-.preview-pane .results-view .line-number {
-  width: 35px;
-  text-align: left;
-  margin-right: 22px; // align with file name
-  color: @text-color-subtle;
-  border-right: 1px solid lighten(@text-color-subtle, 25%);
+.preview-pane .results-view .selected {
+  > .line-number,
+  > .preview,
+  > .path-details.list-item,
+  .path-match-number {
+    color: @text-color-selected !important;
+  }
+
+  .path-match-number {
+    opacity: 0.65;
+  }
 }
 
-// The selected line item
-.preview-pane .results-view .selected .preview span {
-  color: lighten(@background-color-selected, 30%);
-  border-color: currentColor
-}
 .preview-pane .results-view .selected .line-number {
-  color: lighten(@background-color-selected, 30%);
-  border-color: currentColor;
+  color: @text-color-subtle;
 }
 
-
-
-
-
-.results-view li.path.list-nested-item {
-  margin-bottom: 20px; // seperate single files
-  background-color: @input-background-color;
-  border-radius: @border-radius--base;
-  padding: 8px 12px;
-  border: 1px solid @button-border-color;
-  overflow: hidden;
-
-  &:hover {
-    cursor: pointer; // avoid cursor flashing between list items
-  }
-
-  &:first-child {
-    margin-top: 100px;
-  }
+// Increase distance to search result in code
+.preview-pane .results-view .line-number {
+  margin-right: 1rem;
 }
 
-
+// Name of the file the search result was found in
 .results-view .path-details.list-item {
-  font-size: @font-size-h4;
-  margin-bottom: 8px; // same as vertical padding for container box
+  padding: 0 @component-padding;
+}
 
+.results-view .selected > .path-details.list-item {
   &:hover {
-    cursor: pointer;
-    color: @text-color-subtle;
+    background-color: darken(@background-color-selected, 5%);
   }
 }
 
-.results-view .selected > div.path-details.list-item {
-  color: @text-color-selected;
+// Don’t indent the list items
+.results-view .list-tree.has-collapsable-children li.list-item {
+  margin-left: 0;
 }
 
-.results-view .selected.collapsed > div.path-details.list-item {
-  color: @text-color;
-}
-
-.preview-pane .preview-header {
-  padding: 25px 50px 25px 50px;
-  text-align: center;
-  font-family: @font-family-headlines;
-  font-size: 1.75em; // same as Atom settings headings
-  background-image: none;
-  font-weight: bold;
-  background: linear-gradient(to top, @base-background-color, lighten(@base-background-color, 10%));
-  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.3);
-  border-bottom: none;
-  position: absolute;
-  width: 100%;
-  z-index: 1;
-}
-
-.preview-pane .preview .match,
-.preview-pane .preview .replacement {
-  padding: 1px;
-  border-radius: 0;
-}
-
-// Search result file name
-.path-details.list-item .icon {
-  margin-left: 10px;
-}
-
-.list-tree li.list-nested-item.selected.collapsed .path-details.list-item {
-  color: @text-color-selected;
-}
-
-.list-tree li.list-nested-item.selected.collapsed .path-details.list-item .path-match-number {
-  color: lighten(@background-color-selected, 30%);
+.results-view .search-result.list-item,
+.results-view .path-details.list-item {
+  &:hover {
+    background-color: darken(@base-background-color, 3%);
+  }
 }

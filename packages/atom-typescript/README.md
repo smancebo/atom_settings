@@ -4,7 +4,7 @@
 
 JavaScript developers can now just open a `.ts` file and start hacking away like they are used to. No `grunt` no `Visual Studio`. Just pure coding.
 
-**NOTE**: This branch contains a major rewrite (**v11**) of the `atom-typescript` plugin that is lighter and faster, but lacks a few major features that you might miss. The previous version is still available in the `legacy` branch and will containue to receive minor bugfixes, but I wouldn't count on any new developments.
+**NOTE**: This branch contains a major rewrite (**v11**) of the `atom-typescript` plugin that is lighter and faster, but lacks a few major features that you might miss. The previous version is still available in the `legacy` branch and will continue to receive minor bugfixes, but I wouldn't count on any new developments.
 
 ## Installation
 
@@ -74,7 +74,9 @@ Shortcut `shift+F12`. Also called *find usages*.
 ![](https://raw.githubusercontent.com/TypeStrong/atom-typescript/master/docs/screens/renameRefactoring.png)
 
 ## Quick Fix
-Current iteration of the plugin doesn't support any Quickfixes, but they're coming in the future.
+Shortcut : `ctrl+enter` on a Mac and `alt+enter` for Windows and Linux.
+Currently available codefixes:
+https://github.com/Microsoft/TypeScript/tree/master/src/services/codefixes
 
 ## Contributing
 

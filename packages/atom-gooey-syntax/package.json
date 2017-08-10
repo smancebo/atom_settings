@@ -2,40 +2,40 @@
   "_args": [
     [
       {
-        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
         "scope": null,
         "escapedName": null,
         "name": null,
-        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
-        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
         "type": "local"
       },
-      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50585-kvnqpp"
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117223-57630-1mhx142"
     ]
   ],
-  "_from": "../d-116108-50585-1u8oyf6/package.tgz",
-  "_id": "atom-gooey-syntax@0.2.1",
+  "_from": "../d-117223-57630-r4l699/package.tgz",
+  "_id": "atom-gooey-syntax@1.0.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/atom-gooey-syntax",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
     "scope": null,
     "escapedName": null,
     "name": null,
-    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
-    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
     "type": "local"
   },
   "_requiredBy": [
     "#USER"
   ],
-  "_resolved": "file:../d-116108-50585-1u8oyf6/package.tgz",
-  "_shasum": "43fe6cb44a83d73f44822634b1caf5c629ada882",
+  "_resolved": "file:../d-117223-57630-r4l699/package.tgz",
+  "_shasum": "66b2850774a28e5bfda938e53ba82029e4756e3c",
   "_shrinkwrap": null,
-  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-116108-50585-1u8oyf6/package.tgz",
-  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-116108-50585-kvnqpp",
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117223-57630-r4l699/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117223-57630-1mhx142",
   "bugs": {
     "url": "https://github.com/simeydotme/atom-gooey-syntax/issues"
   },
@@ -43,7 +43,7 @@
   "description": "A lovely, gooey, theme for Atom",
   "devDependencies": {},
   "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+    "atom": ">=1.13.0 <2.0.0"
   },
   "homepage": "https://github.com/simeydotme/atom-gooey-syntax#readme",
   "keywords": [
@@ -57,12 +57,12 @@
   "license": "MIT",
   "name": "atom-gooey-syntax",
   "optionalDependencies": {},
-  "readme": "# gooey-syntax theme\n\n### premise\nA greeny-blue theme with purple/red hints.\nInspired after seeing [@mrmrs_](https://twitter.com/mrmrs_)'s terminal theme while he was giving a talk on CSS. It was delicious!\n\n### conclusion\nI hope you loves it! 🌟\n\n### example \n![Example CSS/LESS/SCSS styling](https://raw.githubusercontent.com/simeydotme/atom-gooey-syntax/master/screenshot.png)\n",
+  "readme": "# gooey-syntax theme\n\n### premise\nA greeny-blue theme with purple/red hints.\nInspired after seeing [@mrmrs_](https://twitter.com/mrmrs_)'s terminal theme while he was giving a talk on CSS. It was delicious!\n\n### requirements\nAtom 1.13.0+ uses the new class prefix for syntax instead of the shadow DOM. If you want to use this syntax on older versions of atom, checkout the version 0.2.1.\n\n### conclusion\nI hope you loves it! 🌟\n\n### example\n![Example CSS/LESS/SCSS styling](https://raw.githubusercontent.com/simeydotme/atom-gooey-syntax/master/screenshot.png)\n",
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simeydotme/atom-gooey-syntax.git"
   },
   "theme": "syntax",
-  "version": "0.2.1"
+  "version": "1.0.0"
 }

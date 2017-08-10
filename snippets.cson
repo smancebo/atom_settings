@@ -36,3 +36,10 @@
   'JSON Object':
     'prefix': 'jobject'
     'body': '{${1:Key} : \"${2:Value}\"}'
+'.source.ts':
+  'JSON Key':
+    'prefix': 'jkey'
+    'body': '${1:Key} : \"${2:Value}\",'
+  'JSON Object':
+    'prefix': 'jobject'
+    'body': '{${1:Key} : \"${2:Value}\"}'

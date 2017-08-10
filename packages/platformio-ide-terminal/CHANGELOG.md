@@ -1,3 +1,49 @@
+## 2.5.5 - PlatformIO
+
+* Add compatibility for Atom 1.19
+
+## 2.5.4 - PlatformIO
+
+* Updated One Dark theme foreground color to match Atom
+* Fixed deprecation warning thrown in Atom Beta >=1.13
+
+## 2.5.3 - PlatformIO
+
+* Fix broken "Terminal: Focus" command
+
+## 2.5.2 - PlatformIO
+
+* Fix issue when opened terminal steals focus after focusing Atom
+
+## 2.5.1 - PlatformIO
+
+* Fix for delta calculation in resizePanel
+* Fix focus (ctrl+alt+F) shortcut behavior
+
+## 2.5.0 - PlatformIO
+
+* New PlatformIO IDE Terminal API Provider
+* Load terminal after Atom shell-environment is loaded
+* Fix status bar alignment problem on native-ui theme
+
+## 2.4.0 - PlatformIO
+
+* Add terminal focus command and keybinding
+* Fix issue when running `electron` command
+
+## 2.3.1 - PlatformIO
+
+* Use /bin/bash shell by default if process.env.SHELL is not defined
+
+## 2.3.0 - PlatformIO
+
+* New option: Copy text to clipboard on selection (enabled by default)
+
+## 2.2.3 - PlatformIO
+
+* Add Christmas and One-Dark themes
+* Add compatibility for Atom 1.14 and Windows x64
+
 ## 2.2.2 - PlatformIO
 
 * Fix "Uncaught TypeError: Cannot read property 'focus' of null" ([issue #29](https://github.com/platformio/platformio-atom-ide-terminal/issues/29))

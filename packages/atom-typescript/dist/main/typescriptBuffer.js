@@ -15,26 +15,36 @@ class TypescriptBuffer {
         this.changedAtBatch = 0;
         this.events = new events_1.EventEmitter();
         this.subscriptions = new atom_1.CompositeDisposable();
-        this.dispose = () => {
+        this.dispose = () => tslib_1.__awaiter(this, void 0, void 0, function* () {
             this.subscriptions.dispose();
-            if (this.isOpen) {
-                this.clientPromise.then(client => client.executeClose({ file: this.buffer.getPath() }));
+            if (this.isOpen && this.clientPromise) {
+                const client = yield this.clientPromise;
+                client.executeClose({ file: this.buffer.getPath() });
+                this.events.emit("closed", this.filePath);
             }
-        };
+        });
         this.onDidChange = () => {
             this.changedAt = Date.now();
         };
+        this.onDidChangePath = (newPath) => tslib_1.__awaiter(this, void 0, void 0, function* () {
+            if (this.clientPromise && this.filePath) {
+                const client = yield this.clientPromise;
+                client.executeClose({ file: this.filePath });
+                this.events.emit("closed", this.filePath);
+            }
+            this.open();
+        });
         this.onDidSave = () => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // Check if there isn't a onDidStopChanging event pending.
             const { changedAt, changedAtBatch } = this;
-            if (changedAt && changedAt > changedAtBatch) {
+            if (changedAt && changedAtBatch && changedAt > changedAtBatch) {
                 yield new Promise(resolve => this.events.once("changed", resolve));
             }
             this.events.emit("saved");
         });
         this.onDidStopChanging = ({ changes }) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             // Don't update changedAt or emit any events if there are no actual changes or file isn't open
-            if (changes.length === 0 || !this.isOpen) {
+            if (changes.length === 0 || !this.isOpen || !this.clientPromise) {
                 return;
             }
             this.changedAtBatch = Date.now();
@@ -44,14 +54,14 @@ class TypescriptBuffer {
                 const { start, oldExtent, newText } = change;
                 const end = {
                     endLine: start.row + oldExtent.row + 1,
-                    endOffset: (oldExtent.row === 0 ? start.column + oldExtent.column : oldExtent.column) + 1
+                    endOffset: (oldExtent.row === 0 ? start.column + oldExtent.column : oldExtent.column) + 1,
                 };
                 yield client.executeChange(Object.assign({}, end, { file: filePath, line: start.row + 1, offset: start.column + 1, insertString: newText }));
             }
             this.events.emit("changed");
         });
         this.subscriptions.add(buffer.onDidChange(this.onDidChange));
-        this.subscriptions.add(buffer.onDidChangePath(this.onDidSave));
+        this.subscriptions.add(buffer.onDidChangePath(this.onDidChangePath));
         this.subscriptions.add(buffer.onDidDestroy(this.dispose));
         this.subscriptions.add(buffer.onDidSave(this.onDidSave));
         this.subscriptions.add(buffer.onDidStopChanging(this.onDidStopChanging));
@@ -59,20 +69,17 @@ class TypescriptBuffer {
     }
     open() {
         return tslib_1.__awaiter(this, void 0, void 0, function* () {
-            const filePath = this.buffer.getPath();
-            if (utils_1.isTypescriptFile(filePath)) {
+            this.filePath = this.buffer.getPath();
+            if (utils_1.isTypescriptFile(this.filePath)) {
                 // Set isOpen before we actually open the file to enqueue any changed events
                 this.isOpen = true;
-                this.clientPromise = this.getClient(filePath);
+                this.clientPromise = this.getClient(this.filePath);
                 const client = yield this.clientPromise;
                 yield client.executeOpen({
-                    file: filePath,
-                    fileContent: this.buffer.getText()
+                    file: this.filePath,
+                    fileContent: this.buffer.getText(),
                 });
                 this.events.emit("opened");
-            }
-            else {
-                this.clientPromise = Promise.reject(new Error("Missing filePath or not a Typescript file"));
             }
         });
     }
@@ -103,3 +110,4 @@ class TypescriptBuffer {
     }
 }
 exports.TypescriptBuffer = TypescriptBuffer;
+//# sourceMappingURL=typescriptBuffer.js.map

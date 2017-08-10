@@ -1,13 +1,24 @@
 /* @flow */
 
+import * as url from 'url'
 import React from 'react'
 import marked from 'marked'
 
-import { visitMessage, openExternally } from '../helpers'
+import { visitMessage, openExternally, openFile } from '../helpers'
 import type TooltipDelegate from './delegate'
 import type { Message } from '../types'
 
-export default class MessageElement extends React.Component {
+function findHref(el: ?Element): ?string {
+  while (el && !el.classList.contains('linter-line')) {
+    if (el instanceof HTMLAnchorElement) {
+      return el.href
+    }
+    el = el.parentElement
+  }
+  return null
+}
+
+class MessageElement extends React.Component {
   props: {
     message: Message,
     delegate: TooltipDelegate,
@@ -71,13 +82,31 @@ export default class MessageElement extends React.Component {
       console.error('[Linter] Invalid description detected, expected string or function but got:', typeof description)
     }
   }
+  openFile = (ev: Event) => {
+    if (!(ev.target instanceof HTMLElement)) {
+      return
+    }
+    const href = findHref(ev.target)
+    if (!href) {
+      return
+    }
+    // parse the link. e.g. atom://linter?file=<path>&row=<number>&column=<number>
+    const { protocol, hostname, query } = url.parse(href, true)
+    const file = query && query.file
+    if (protocol !== 'atom:' || hostname !== 'linter' || !file) {
+      return
+    }
+    const row = query && query.row ? parseInt(query.row, 10) : 0
+    const column = query && query.column ? parseInt(query.column, 10) : 0
+    openFile(file, { row, column })
+  }
   render() {
     const { message, delegate } = this.props
 
-    return (<linter-message class={message.severity}>
+    return (<linter-message class={message.severity} onClick={this.openFile}>
       { message.description && (
         <a href="#" onClick={() => this.toggleDescription()}>
-          <span className={`icon linter-icon icon-${this.state.descriptionShow ? 'chevron-down' : 'chevron-right'}`}></span>
+          <span className={`icon linter-icon icon-${this.state.descriptionShow ? 'chevron-down' : 'chevron-right'}`} />
         </a>
       )}
       <linter-excerpt>
@@ -86,15 +115,17 @@ export default class MessageElement extends React.Component {
       </linter-excerpt>{' '}
       { message.reference && message.reference.file && (
         <a href="#" onClick={() => visitMessage(message, true)}>
-          <span className="icon linter-icon icon-alignment-aligned-to"></span>
+          <span className="icon linter-icon icon-alignment-aligned-to" />
         </a>
       )}
-      <a href="#" onClick={() => openExternally(message)}>
-        <span className="icon linter-icon icon-link"></span>
-      </a>
+      { message.url && <a href="#" onClick={() => openExternally(message)}>
+        <span className="icon linter-icon icon-link" />
+      </a>}
       { this.state.descriptionShow && (
-        <div dangerouslySetInnerHTML={{ __html: this.state.description || 'Loading...' }} class="linter-line"></div>
+        <div dangerouslySetInnerHTML={{ __html: this.state.description || 'Loading...' }} className="linter-line" />
       ) }
     </linter-message>)
   }
 }
+
+module.exports = MessageElement

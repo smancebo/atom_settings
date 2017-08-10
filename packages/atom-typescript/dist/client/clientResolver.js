@@ -1,12 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+const tslib_1 = require("tslib");
 const client_1 = require("./client");
 const events = require("events");
 const path = require("path");
-const resolve_1 = require("resolve");
+const Resolve = require("resolve");
 const defaultServer = {
     serverPath: require.resolve("typescript/bin/tsserver"),
-    version: require("typescript").version
+    version: require("typescript").version,
 };
 /**
  * ClientResolver takes care of finding the correct tsserver for a source file based on how a
@@ -21,9 +22,7 @@ class ClientResolver extends events.EventEmitter {
         return super.on(event, callback);
     }
     get(filePath) {
-        return resolveServer(filePath)
-            .catch(() => defaultServer)
-            .then(({ serverPath, version }) => {
+        return resolveServer(filePath).catch(() => defaultServer).then(({ serverPath, version }) => {
             if (this.clients[serverPath]) {
                 return this.clients[serverPath].client;
             }
@@ -40,7 +39,7 @@ class ClientResolver extends events.EventEmitter {
                         type,
                         serverPath,
                         filePath,
-                        diagnostics: result.diagnostics
+                        diagnostics: result.diagnostics,
                     });
                 }
             };
@@ -59,15 +58,29 @@ class ClientResolver extends events.EventEmitter {
     }
 }
 exports.ClientResolver = ClientResolver;
+// Promisify the async resolve function
+const resolveModule = (id, opts) => {
+    return new Promise((resolve, reject) => Resolve(id, opts, (err, result) => {
+        if (err) {
+            reject(err);
+        }
+        else {
+            resolve(result);
+        }
+    }));
+};
 function resolveServer(sourcePath) {
-    const basedir = path.dirname(sourcePath);
-    return Promise.resolve().then(() => {
-        const resolvedPath = resolve_1.sync("typescript/bin/tsserver", { basedir });
+    return tslib_1.__awaiter(this, void 0, void 0, function* () {
+        const { NODE_PATH } = process.env;
+        const resolvedPath = yield resolveModule("typescript/bin/tsserver", {
+            basedir: path.dirname(sourcePath),
+            paths: NODE_PATH && [NODE_PATH],
+        });
         const packagePath = path.resolve(resolvedPath, "../../package.json");
         const version = require(packagePath).version;
         return {
             version,
-            serverPath: resolvedPath
+            serverPath: resolvedPath,
         };
     });
 }
@@ -75,3 +88,4 @@ exports.resolveServer = resolveServer;
 function isConfDiagBody(body) {
     return body && body.triggerFile && body.configFile;
 }
+//# sourceMappingURL=clientResolver.js.map

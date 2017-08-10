@@ -71,6 +71,7 @@ class PlatformIOTerminalView extends View
     @xterm.on 'mouseup', (event) =>
       if event.which != 3
         text = window.getSelection().toString()
+        atom.clipboard.write(text) if atom.config.get('platformio-ide-terminal.toggles.selectToCopy') and text
         unless text
           @focus()
     @xterm.on 'dragenter', override
@@ -223,6 +224,7 @@ class PlatformIOTerminalView extends View
         @displayTerminal()
         @prevHeight = @nearestRow(@xterm.height())
         @xterm.height(@prevHeight)
+        @emit "platformio-ide-terminal:terminal-open"
       else
         @focus()
 
@@ -265,6 +267,28 @@ class PlatformIOTerminalView extends View
     return unless @ptyProcess.childProcess?
 
     @ptyProcess.send {event: 'resize', rows, cols}
+
+  pty: () ->
+    if not @opened
+      wait = new Promise (resolve, reject) =>
+        @emitter.on "platformio-ide-terminal:terminal-open", () =>
+          resolve()
+        setTimeout reject, 1000
+
+      wait.then () =>
+        @ptyPromise()
+    else
+      @ptyPromise()
+
+  ptyPromise: () ->
+    new Promise (resolve, reject) =>
+      if @ptyProcess?
+        @ptyProcess.on "platformio-ide-terminal:pty", (pty) =>
+          resolve(pty)
+        @ptyProcess.send {event: 'pty'}
+        setTimeout reject, 1000
+      else
+        reject()
 
   applyStyle: ->
     config = atom.config.get 'platformio-ide-terminal'
@@ -378,7 +402,7 @@ class PlatformIOTerminalView extends View
     return @resizeStopped() unless event.which is 1
 
     mouseY = $(window).height() - event.pageY
-    delta = mouseY - $('atom-panel-container.bottom').height()
+    delta = mouseY - $('atom-panel-container.bottom').height() - $('atom-panel-container.footer').height()
     return unless Math.abs(delta) > (@rowHeight * 5 / 6)
 
     clamped = Math.max(@nearestRow(@prevHeight + delta), @rowHeight)
@@ -430,9 +454,9 @@ class PlatformIOTerminalView extends View
       replace(/\$S/, selectionText).
       replace(/\$\$/, '$')}#{if runCommand then os.EOL else ''}"
 
-  focus: =>
+  focus: (fromWindowEvent) =>
     @resizeTerminalToView()
-    @focusTerminal()
+    @focusTerminal(fromWindowEvent)
     @statusBar.setActiveTerminalView(this)
     super()
 
@@ -440,8 +464,11 @@ class PlatformIOTerminalView extends View
     @blurTerminal()
     super()
 
-  focusTerminal: =>
+  focusTerminal: (fromWindowEvent) =>
     return unless @terminal
+
+    lastActiveElement = $(document.activeElement)
+    return if fromWindowEvent and not (lastActiveElement.is('div.terminal') or lastActiveElement.parents('div.terminal').length)
 
     @terminal.focus()
     if @terminal._textarea
@@ -454,6 +481,9 @@ class PlatformIOTerminalView extends View
 
     @terminal.blur()
     @terminal.element.blur()
+
+    if lastActiveElement?
+      lastActiveElement.focus()
 
   resizeTerminalToView: ->
     return unless @panel.isVisible() or @tabView

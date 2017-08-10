@@ -42,10 +42,22 @@ class Tabs extends Consumer {
 				this.add(tab);
 			})
 		);
-	
-		for(const bar of this.packageModule.tabBarViews)
-			for(const tab of bar.getTabs())
-				this.add(tab);
+		this.addCurrentTabs();
+		
+		// Project Plus has a "switch" feature that flips between workspaces
+		// in the same window. Make sure Tabs are cleared when doing so.
+		if(atom.packages.activePackages["project-plus"])
+			try{
+				const util = this.loadPackageFile("lib/util.js");
+				this.punch(util, "switchToProject", oldFn => {
+					this.resetNodes();
+					const switchPromise = oldFn();
+					switchPromise.then(() => this.addCurrentTabs());
+					return switchPromise;
+				});
+			} catch(error){
+				console.error("FILE-ICONS: Error patching tabs for project-plus", error);
+			}
 	}
 	
 	
@@ -56,12 +68,18 @@ class Tabs extends Consumer {
 	
 	
 	reset(){
-		this.tabs.forEach(tab => this.remove(tab));
+		this.resetNodes();
 		super.reset();
-		this.tabs.clear();
 		this.tabs = null;
 		this.tabElements = null;
 		this.tabsByElement = null;
+	}
+	
+	
+	resetNodes(){
+		super.resetNodes();
+		this.tabs.forEach(tab => this.remove(tab));
+		this.tabs.clear();
 	}
 	
 	
@@ -78,6 +96,13 @@ class Tabs extends Consumer {
 			});
 			this.disposables.add(disposable);
 		}
+	}
+	
+	
+	addCurrentTabs(){
+		for(const bar of this.packageModule.tabBarViews)
+			for(const tab of bar.getTabs())
+				this.add(tab);
 	}
 	
 	
@@ -126,6 +151,7 @@ class Tabs extends Consumer {
 	
 	
 	fixIcon(tab){
+		if(!tab) return;
 		
 		// TODO: Remove check/updateIcon() once atom/tabs#402 is public
 		if("function" === typeof tab.updateIcon)
@@ -145,19 +171,6 @@ class Tabs extends Consumer {
 	closeAll(){
 		const workspace = atom.views.getView(atom.workspace);
 		atom.commands.dispatch(workspace, "tabs:close-all-tabs");
-	}
-	
-	
-	// TODO: A hot cup of Chai. Now.
-	ls(){
-		const tabs = [];
-		for(const paneItem of atom.workspace.getPaneItems()){
-			const name = paneItem.getFileName();
-			const tab = this.tabForEditor(paneItem);
-			tabs.push(tab);
-			Object.defineProperty(tabs, name, {value: tab.itemTitle});
-		}
-		return tabs;
 	}
 }
 

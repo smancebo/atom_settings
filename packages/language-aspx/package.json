@@ -1,0 +1,60 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117418-23629-yetos8.44k15dbo6r"
+    ]
+  ],
+  "_from": "../d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+  "_id": "language-aspx@0.5.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/language-aspx",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+  "_shasum": "4986620be8006137c4baf3ecb5b6ab1a6086ed07",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117418-23629-1fm2zqm.870wuhm2t9/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117418-23629-yetos8.44k15dbo6r",
+  "bugs": {
+    "url": "https://github.com/jbalboni/atom-language-aspx/issues"
+  },
+  "dependencies": {},
+  "description": "Language file for ASP.NET Web Forms files (aspx, ascx, ashx)",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "homepage": "https://github.com/jbalboni/atom-language-aspx#readme",
+  "license": "MIT",
+  "name": "language-aspx",
+  "optionalDependencies": {},
+  "private": true,
+  "readme": "# language-aspx package\n\nProvides language support for ASP.NET Web Forms and User Controls.\n\nAssumes the html and csharp language files, so you should install those, too.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbalboni/atom-language-aspx.git"
+  },
+  "version": "0.5.0"
+}

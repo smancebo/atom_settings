@@ -28,7 +28,7 @@ registry_1.commands.set("typescript:rename-refactor", deps => {
                     return "If you want to abort : Press esc to exit";
                 }
                 return "";
-            }
+            },
         });
         locs.map((loc) => tslib_1.__awaiter(this, void 0, void 0, function* () {
             const { buffer, isOpen } = yield deps.getTypescriptBuffer(loc.file);
@@ -46,3 +46,4 @@ registry_1.commands.set("typescript:rename-refactor", deps => {
         }));
     });
 });
+//# sourceMappingURL=renameRefactor.js.map

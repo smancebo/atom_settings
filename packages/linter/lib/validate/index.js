@@ -42,7 +42,9 @@ function validateLinter(linter: Linter, version: 1 | 2): boolean {
 
   if (linter && typeof linter === 'object') {
     if (typeof linter.name !== 'string') {
-      messages.push('Linter.name must be a string')
+      if (version === 2) {
+        messages.push('Linter.name must be a string')
+      } else linter.name = 'Unknown'
     }
     if (typeof linter.scope !== 'string' || (linter.scope !== 'file' && linter.scope !== 'project')) {
       messages.push("Linter.scope must be either 'file' or 'project'")
@@ -101,6 +103,7 @@ function validateMessages(linterName: string, entries: Array<Message>): boolean 
     let invalidSolution = false
     let invalidReference = false
     let invalidDescription = false
+    let invalidLinterName = false
 
     for (let i = 0, length = entries.length; i < length; ++i) {
       const message = entries[i]
@@ -143,11 +146,15 @@ function validateMessages(linterName: string, entries: Array<Message>): boolean 
       }
       if (!invalidURL && message.url && typeof message.url !== 'string') {
         invalidURL = true
-        messages.push('Message.url must a string')
+        messages.push('Message.url must be a string')
       }
       if (!invalidDescription && message.description && typeof message.description !== 'function' && typeof message.description !== 'string') {
         invalidDescription = true
         messages.push('Message.description must be a function or string')
+      }
+      if (!invalidLinterName && message.linterName && typeof message.linterName !== 'string') {
+        invalidLinterName = true
+        messages.push('Message.linterName must be a string')
       }
     }
   } else {

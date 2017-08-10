@@ -1,19 +1,26 @@
 /* @flow */
 
-import { CompositeDisposable } from 'sb-event-kit'
+import { CompositeDisposable } from 'atom'
 import type { Linter } from './types'
 
-export default class BusySignal {
+class BusySignal {
   provider: ?Object;
   executing: Set<{
     linter: Linter,
     filePath: ?string,
   }>;
+  providerTitles: Set<string>;
+  useBusySignal: boolean;
   subscriptions: CompositeDisposable;
 
   constructor() {
     this.executing = new Set()
+    this.providerTitles = new Set()
     this.subscriptions = new CompositeDisposable()
+
+    this.subscriptions.add(atom.config.observe('linter-ui-default.useBusySignal', (useBusySignal) => {
+      this.useBusySignal = useBusySignal
+    }))
   }
   attach(registry: Object) {
     this.provider = registry.create()
@@ -21,11 +28,10 @@ export default class BusySignal {
   }
   update() {
     const provider = this.provider
-    if (!provider) {
-      return
-    }
-    provider.clear()
+    if (!provider) return
+    if (!this.useBusySignal) return
     const fileMap: Map<?string, Array<string>> = new Map()
+    const currentTitles = new Set()
 
     for (const { filePath, linter } of this.executing) {
       let names = fileMap.get(filePath)
@@ -37,8 +43,25 @@ export default class BusySignal {
 
     for (const [filePath, names] of fileMap) {
       const path = filePath ? ` on ${atom.project.relativizePath(filePath)[1]}` : ''
-      provider.add(`${names.join(', ')}${path}`)
+      names.forEach((name) => {
+        const title = `${name}${path}`
+        currentTitles.add(title)
+        if (!this.providerTitles.has(title)) {
+          // Add the title since it hasn't been seen before
+          this.providerTitles.add(title)
+          provider.add(title)
+        }
+      })
     }
+
+    // Remove any titles no longer active
+    this.providerTitles.forEach((title) => {
+      if (!currentTitles.has(title)) {
+        provider.remove(title)
+        this.providerTitles.delete(title)
+      }
+    })
+
     fileMap.clear()
   }
   getExecuting(linter: Linter, filePath: ?string): ?Object {
@@ -67,7 +90,10 @@ export default class BusySignal {
     if (this.provider) {
       this.provider.clear()
     }
+    this.providerTitles.clear()
     this.executing.clear()
     this.subscriptions.dispose()
   }
 }
+
+module.exports = BusySignal

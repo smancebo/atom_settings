@@ -2,6 +2,10 @@
   "atom-beautify":
     general:
       _analyticsUserId: "b420845a-1d5c-4bfd-bb19-46377f58b6d5"
+  "color-picker":
+    abbreviateValues: true
+    preferredFormat: "HEX"
+    randomColor: false
   core:
     telemetryConsent: "no"
     themes: [
@@ -14,13 +18,21 @@
     ignoreErrorCodes: [
       "E251"
     ]
+  "linter-ui-default":
+    showPanel: true
+  pigments:
+    autocompleteSuggestionsFromValue: true
+    groupPaletteColors: "by file"
+    markerType: "native-dot"
+    sortPaletteColors: "by color"
   "platformio-ide-terminal":
     ansiColors:
       normal:
         black: "#212121"
         blue: "#5fa3cd"
     style:
-      theme: "solid-colors"
-  "tree-view": {}
+      theme: "one-dark"
+  "tree-view":
+    hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false

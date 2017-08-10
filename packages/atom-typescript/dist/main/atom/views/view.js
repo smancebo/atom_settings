@@ -11,7 +11,7 @@ class View extends sp.View {
         return this;
     }
     static content() {
-        throw new Error('Must override the base View static content member');
+        throw new Error("Must override the base View static content member");
     }
     init() { }
 }
@@ -27,8 +27,9 @@ class ScrollView extends sp.ScrollView {
         return this;
     }
     static content() {
-        throw new Error('Must override the base View static content member');
+        throw new Error("Must override the base View static content member");
     }
     init() { }
 }
 exports.ScrollView = ScrollView;
+//# sourceMappingURL=view.js.map
