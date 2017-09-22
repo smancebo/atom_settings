@@ -1,0 +1,994 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117818-11189-1ntvzfx.5tvt6xyldi"
+    ]
+  ],
+  "_from": "../d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+  "_id": "linter-tslint@1.7.0",
+  "_inCache": true,
+  "_location": "/linter-tslint",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+  "_shasum": "5f55706cb3bf0df631876e89de056f568ffed315",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117818-11189-1ebw8bn.ck8en4s4i/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117818-11189-1ntvzfx.5tvt6xyldi",
+  "bugs": {
+    "url": "https://github.com/AtomLinter/linter-tslint/issues"
+  },
+  "configSchema": {
+    "rulesDirectory": {
+      "type": "string",
+      "title": "Custom rules directory (absolute path)",
+      "default": ""
+    },
+    "useLocalTslint": {
+      "type": "boolean",
+      "title": "Try using the local tslint package (if exist)",
+      "default": true
+    },
+    "enableSemanticRules": {
+      "type": "boolean",
+      "title": "Enable semantic rules",
+      "description": "Allow passing a TypeScript program object to the linter. May negatively affect performance. See this page for details: https://palantir.github.io/tslint/usage/type-checking/",
+      "default": false
+    },
+    "ignoreTypings": {
+      "type": "boolean",
+      "title": "Ignore typings files (.d.ts)",
+      "default": false
+    },
+    "fixOnSave": {
+      "title": "Fix errors on save",
+      "description": "Have tslint attempt to fix some errors automatically when saving the file.",
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "dependencies": {
+    "atom-package-deps": "^4.3.1",
+    "crypto-random-string": "^1.0.0",
+    "escape-html": "^1.0.3",
+    "loophole": "^1.1.0",
+    "resolve": "^1.2.0",
+    "tslint": "5.5.0",
+    "tslint-rule-documentation": "^1.0.1",
+    "typescript": "2.4.1"
+  },
+  "description": "Linter plugin for Typescript, using tslint",
+  "devDependencies": {
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "jasmine-fix": "^1.0.1"
+  },
+  "dist": {
+    "shasum": "ef99bad67e3e7db0dc69d8d379272ef02f4a4a21"
+  },
+  "engines": {
+    "atom": ">=1.14.0 <2.0.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+      "global-require": "off",
+      "import/no-unresolved": [
+        "error",
+        {
+          "ignore": [
+            "atom"
+          ]
+        }
+      ]
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "globals": {
+      "atom": true
+    }
+  },
+  "homepage": "https://github.com/AtomLinter/linter-tslint",
+  "license": "MIT",
+  "main": "./lib/main.js",
+  "name": "linter-tslint",
+  "optionalDependencies": {},
+  "package-deps": [
+    "linter"
+  ],
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "[![Travis](https://img.shields.io/travis/AtomLinter/linter-tslint.svg?style=flat-square)](https://travis-ci.org/AtomLinter/linter-tslint)\n[![Version](https://img.shields.io/apm/v/linter-tslint.svg?style=flat-square)](https://atom.io/packages/linter-tslint)\n[![Downloads](https://img.shields.io/apm/dm/linter-tslint.svg?style=flat-square)](https://atom.io/packages/linter-tslint)\n\nlinter-tslint\n==============\nThis linter plugin for AtomLinter provides an interface to [tslint](https://github.com/palantir/tslint). It will be used with files that have the \"TypeScript\" or \"TypeScriptReact\" syntax.\n\n## Installation\nOn first activation the plugin will install all dependencies automatically, you no longer have to worry about installing Linter.\n\n### Plugin installation\n```\n$ apm install linter-tslint\n```\n\n## Settings\nYou can configure linter-tslint by editing `~/.atom/config.cson` (choose Config... in Atom menu):\n```coffee\n'linter-tslint':\n  # Custom rules directory (absolute path)\n  rulesDirectory: \"/path/to/rules\"\n  # Try using the local tslint package (if exist)\n  useLocalTslint: true\n  # Enable semantic rules\n  enableSemanticRules: true\n```\n\n## Contributing\nIf you would like to contribute enhancements or fixes, please do the following:\n\n1. Fork the plugin repository.\n1. Hack on a separate topic branch created from the latest `master`.\n1. Commit and push the topic branch.\n1. Make a pull request.\n1. welcome to the club\n\nPlease note that modifications should follow these coding guidelines:\n\n- Indent is 2 spaces.\n- Code should pass coffeelint linter.\n- Vertical whitespace helps readability, don’t be afraid to use it.\n\nThank you for helping out!\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomLinter/linter-tslint.git"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "apm test"
+  },
+  "version": "1.7.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-regex",
+        "version": "2.1.1",
+        "path": "node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.2.1",
+        "path": "node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "atom-package-deps",
+        "version": "4.6.0",
+        "path": "node_modules/atom-package-deps/lib/index.js"
+      },
+      {
+        "name": "atom-package-path",
+        "version": "1.1.0",
+        "path": "node_modules/atom-package-path/lib/index.js"
+      },
+      {
+        "name": "babel-code-frame",
+        "version": "6.26.0",
+        "path": "node_modules/babel-code-frame/lib/index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "1.0.0",
+        "path": "node_modules/balanced-match/index.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.8",
+        "path": "node_modules/brace-expansion/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.3",
+        "path": "node_modules/chalk/index.js"
+      },
+      {
+        "name": "colors",
+        "version": "1.1.2",
+        "path": "node_modules/colors/lib/index.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.11.0",
+        "path": "node_modules/commander/index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules/concat-map/index.js"
+      },
+      {
+        "name": "consistent-env",
+        "version": "1.3.1",
+        "path": "node_modules/consistent-env/lib/index.js"
+      },
+      {
+        "name": "crypto-random-string",
+        "version": "1.0.0",
+        "path": "node_modules/crypto-random-string/index.js"
+      },
+      {
+        "name": "diff",
+        "version": "3.3.1",
+        "path": "node_modules/diff/lib/index.js"
+      },
+      {
+        "name": "escape-html",
+        "version": "1.0.3",
+        "path": "node_modules/escape-html/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "esutils",
+        "version": "2.0.2",
+        "path": "node_modules/esutils/lib/utils.js"
+      },
+      {
+        "name": "fs.realpath",
+        "version": "1.0.0",
+        "path": "node_modules/fs.realpath/index.js"
+      },
+      {
+        "name": "glob",
+        "version": "7.1.2",
+        "path": "node_modules/glob/glob.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.6",
+        "path": "node_modules/inflight/inflight.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.3",
+        "path": "node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "is-utf8",
+        "version": "0.2.1",
+        "path": "node_modules/is-utf8/is-utf8.js"
+      },
+      {
+        "name": "js-tokens",
+        "version": "3.0.2",
+        "path": "node_modules/js-tokens/index.js"
+      },
+      {
+        "name": "lodash.uniq",
+        "version": "4.5.0",
+        "path": "node_modules/lodash.uniq/index.js"
+      },
+      {
+        "name": "loophole",
+        "version": "1.1.0",
+        "path": "node_modules/loophole/lib/loophole.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.4",
+        "path": "node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "once",
+        "version": "1.4.0",
+        "path": "node_modules/once/once.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.1",
+        "path": "node_modules/path-is-absolute/index.js"
+      },
+      {
+        "name": "path-parse",
+        "version": "1.0.5",
+        "path": "node_modules/path-parse/index.js"
+      },
+      {
+        "name": "resolve",
+        "version": "1.4.0",
+        "path": "node_modules/resolve/index.js"
+      },
+      {
+        "name": "sb-callsite",
+        "version": "1.1.2",
+        "path": "node_modules/sb-callsite/lib/main.js"
+      },
+      {
+        "name": "sb-exec",
+        "version": "3.1.0",
+        "path": "node_modules/sb-exec/lib/index.js"
+      },
+      {
+        "name": "sb-fs",
+        "version": "3.0.0",
+        "path": "node_modules/sb-fs/lib/index.js"
+      },
+      {
+        "name": "sb-memoize",
+        "version": "1.0.2",
+        "path": "node_modules/sb-memoize/lib/index.js"
+      },
+      {
+        "name": "sb-npm-path",
+        "version": "2.0.0",
+        "path": "node_modules/sb-npm-path/lib/index.js"
+      },
+      {
+        "name": "sb-promisify",
+        "version": "2.0.2",
+        "path": "node_modules/sb-promisify/lib/index.js"
+      },
+      {
+        "name": "semver",
+        "version": "5.4.1",
+        "path": "node_modules/semver/semver.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "strip-bom-buf",
+        "version": "1.0.0",
+        "path": "node_modules/strip-bom-buf/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules/supports-color/index.js"
+      },
+      {
+        "name": "tslib",
+        "version": "1.7.1",
+        "path": "node_modules/tslib/tslib.js"
+      },
+      {
+        "name": "tslint",
+        "version": "5.5.0",
+        "path": "node_modules/tslint/lib/index.js"
+      },
+      {
+        "name": "tslint-rule-documentation",
+        "version": "1.0.3",
+        "path": "node_modules/tslint-rule-documentation/dist/index.js"
+      },
+      {
+        "name": "tsutils",
+        "version": "2.8.2",
+        "path": "node_modules/tsutils/index.js"
+      },
+      {
+        "name": "typescript",
+        "version": "2.4.1",
+        "path": "node_modules/typescript/lib/typescript.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.2",
+        "path": "node_modules/wrappy/wrappy.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "lib/main.js",
+        "lib/worker.js",
+        "lib/workerHelper.js",
+        "node_modules/ansi-regex/index.js",
+        "node_modules/ansi-styles/index.js",
+        "node_modules/atom-package-deps/lib/helpers.js",
+        "node_modules/atom-package-deps/lib/index.js",
+        "node_modules/atom-package-deps/lib/types.js",
+        "node_modules/atom-package-deps/lib/view.js",
+        "node_modules/atom-package-path/lib/index.js",
+        "node_modules/babel-code-frame/lib/index.js",
+        "node_modules/balanced-match/index.js",
+        "node_modules/brace-expansion/index.js",
+        "node_modules/chalk/index.js",
+        "node_modules/colors/examples/normal-usage.js",
+        "node_modules/colors/examples/safe-string.js",
+        "node_modules/colors/lib/colors.js",
+        "node_modules/colors/lib/custom/trap.js",
+        "node_modules/colors/lib/custom/zalgo.js",
+        "node_modules/colors/lib/extendStringPrototype.js",
+        "node_modules/colors/lib/index.js",
+        "node_modules/colors/lib/maps/america.js",
+        "node_modules/colors/lib/maps/rainbow.js",
+        "node_modules/colors/lib/maps/random.js",
+        "node_modules/colors/lib/maps/zebra.js",
+        "node_modules/colors/lib/styles.js",
+        "node_modules/colors/lib/system/supports-colors.js",
+        "node_modules/colors/safe.js",
+        "node_modules/colors/themes/generic-logging.js",
+        "node_modules/commander/index.js",
+        "node_modules/concat-map/example/map.js",
+        "node_modules/concat-map/index.js",
+        "node_modules/consistent-env/lib/helpers.js",
+        "node_modules/consistent-env/lib/index.js",
+        "node_modules/crypto-random-string/index.js",
+        "node_modules/diff/dist/diff.js",
+        "node_modules/diff/dist/diff.min.js",
+        "node_modules/diff/lib/convert/dmp.js",
+        "node_modules/diff/lib/convert/xml.js",
+        "node_modules/diff/lib/diff/array.js",
+        "node_modules/diff/lib/diff/base.js",
+        "node_modules/diff/lib/diff/character.js",
+        "node_modules/diff/lib/diff/css.js",
+        "node_modules/diff/lib/diff/json.js",
+        "node_modules/diff/lib/diff/line.js",
+        "node_modules/diff/lib/diff/sentence.js",
+        "node_modules/diff/lib/diff/word.js",
+        "node_modules/diff/lib/index.js",
+        "node_modules/diff/lib/patch/apply.js",
+        "node_modules/diff/lib/patch/create.js",
+        "node_modules/diff/lib/patch/merge.js",
+        "node_modules/diff/lib/patch/parse.js",
+        "node_modules/diff/lib/util/array.js",
+        "node_modules/diff/lib/util/distance-iterator.js",
+        "node_modules/diff/lib/util/params.js",
+        "node_modules/diff/runtime.js",
+        "node_modules/escape-html/index.js",
+        "node_modules/escape-string-regexp/index.js",
+        "node_modules/esutils/lib/ast.js",
+        "node_modules/esutils/lib/code.js",
+        "node_modules/esutils/lib/keyword.js",
+        "node_modules/esutils/lib/utils.js",
+        "node_modules/fs.realpath/index.js",
+        "node_modules/fs.realpath/old.js",
+        "node_modules/glob/common.js",
+        "node_modules/glob/glob.js",
+        "node_modules/glob/sync.js",
+        "node_modules/has-ansi/index.js",
+        "node_modules/inflight/inflight.js",
+        "node_modules/inherits/inherits.js",
+        "node_modules/inherits/inherits_browser.js",
+        "node_modules/is-utf8/is-utf8.js",
+        "node_modules/js-tokens/index.js",
+        "node_modules/lodash.uniq/index.js",
+        "node_modules/loophole/lib/loophole.js",
+        "node_modules/minimatch/minimatch.js",
+        "node_modules/once/once.js",
+        "node_modules/path-is-absolute/index.js",
+        "node_modules/path-parse/index.js",
+        "node_modules/path-parse/index.min.js",
+        "node_modules/path-parse/test.js",
+        "node_modules/path-parse/test.min.js",
+        "node_modules/resolve/example/async.js",
+        "node_modules/resolve/example/sync.js",
+        "node_modules/resolve/index.js",
+        "node_modules/resolve/lib/async.js",
+        "node_modules/resolve/lib/caller.js",
+        "node_modules/resolve/lib/core.js",
+        "node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/resolve/lib/sync.js",
+        "node_modules/sb-callsite/lib/main.js",
+        "node_modules/sb-exec/decls/jasmine.js",
+        "node_modules/sb-exec/lib/helpers.js",
+        "node_modules/sb-exec/lib/index.js",
+        "node_modules/sb-exec/lib/types.js",
+        "node_modules/sb-fs/lib/index.js",
+        "node_modules/sb-memoize/lib/index.js",
+        "node_modules/sb-npm-path/decls/jasmine.js",
+        "node_modules/sb-npm-path/lib/helpers.js",
+        "node_modules/sb-npm-path/lib/index.js",
+        "node_modules/sb-promisify/lib/index.js",
+        "node_modules/semver/semver.js",
+        "node_modules/strip-ansi/index.js",
+        "node_modules/strip-bom-buf/index.js",
+        "node_modules/supports-color/index.js",
+        "node_modules/tslib/tslib.es6.js",
+        "node_modules/tslib/tslib.js",
+        "node_modules/tslint/lib/configs/all.js",
+        "node_modules/tslint/lib/configs/latest.js",
+        "node_modules/tslint/lib/configs/recommended.js",
+        "node_modules/tslint/lib/configuration.js",
+        "node_modules/tslint/lib/enableDisableRules.js",
+        "node_modules/tslint/lib/error.js",
+        "node_modules/tslint/lib/formatterLoader.js",
+        "node_modules/tslint/lib/formatters/checkstyleFormatter.js",
+        "node_modules/tslint/lib/formatters/codeFrameFormatter.js",
+        "node_modules/tslint/lib/formatters/fileslistFormatter.js",
+        "node_modules/tslint/lib/formatters/index.js",
+        "node_modules/tslint/lib/formatters/jsonFormatter.js",
+        "node_modules/tslint/lib/formatters/msbuildFormatter.js",
+        "node_modules/tslint/lib/formatters/pmdFormatter.js",
+        "node_modules/tslint/lib/formatters/proseFormatter.js",
+        "node_modules/tslint/lib/formatters/stylishFormatter.js",
+        "node_modules/tslint/lib/formatters/tapFormatter.js",
+        "node_modules/tslint/lib/formatters/verboseFormatter.js",
+        "node_modules/tslint/lib/formatters/vsoFormatter.js",
+        "node_modules/tslint/lib/formatters.js",
+        "node_modules/tslint/lib/index.js",
+        "node_modules/tslint/lib/language/formatter/abstractFormatter.js",
+        "node_modules/tslint/lib/language/formatter/formatter.js",
+        "node_modules/tslint/lib/language/rule/abstractRule.js",
+        "node_modules/tslint/lib/language/rule/optionallyTypedRule.js",
+        "node_modules/tslint/lib/language/rule/rule.js",
+        "node_modules/tslint/lib/language/rule/typedRule.js",
+        "node_modules/tslint/lib/language/utils.js",
+        "node_modules/tslint/lib/language/walker/blockScopeAwareRuleWalker.js",
+        "node_modules/tslint/lib/language/walker/index.js",
+        "node_modules/tslint/lib/language/walker/programAwareRuleWalker.js",
+        "node_modules/tslint/lib/language/walker/ruleWalker.js",
+        "node_modules/tslint/lib/language/walker/scopeAwareRuleWalker.js",
+        "node_modules/tslint/lib/language/walker/syntaxWalker.js",
+        "node_modules/tslint/lib/language/walker/walkContext.js",
+        "node_modules/tslint/lib/language/walker/walker.js",
+        "node_modules/tslint/lib/linter.js",
+        "node_modules/tslint/lib/ruleLoader.js",
+        "node_modules/tslint/lib/rules/adjacentOverloadSignaturesRule.js",
+        "node_modules/tslint/lib/rules/alignRule.js",
+        "node_modules/tslint/lib/rules/arrayTypeRule.js",
+        "node_modules/tslint/lib/rules/arrowParensRule.js",
+        "node_modules/tslint/lib/rules/arrowReturnShorthandRule.js",
+        "node_modules/tslint/lib/rules/awaitPromiseRule.js",
+        "node_modules/tslint/lib/rules/banRule.js",
+        "node_modules/tslint/lib/rules/banTypesRule.js",
+        "node_modules/tslint/lib/rules/binaryExpressionOperandOrderRule.js",
+        "node_modules/tslint/lib/rules/callableTypesRule.js",
+        "node_modules/tslint/lib/rules/classNameRule.js",
+        "node_modules/tslint/lib/rules/commentFormatRule.js",
+        "node_modules/tslint/lib/rules/completedDocsRule.js",
+        "node_modules/tslint/lib/rules/curlyRule.js",
+        "node_modules/tslint/lib/rules/cyclomaticComplexityRule.js",
+        "node_modules/tslint/lib/rules/deprecationRule.js",
+        "node_modules/tslint/lib/rules/encodingRule.js",
+        "node_modules/tslint/lib/rules/eoflineRule.js",
+        "node_modules/tslint/lib/rules/fileHeaderRule.js",
+        "node_modules/tslint/lib/rules/forinRule.js",
+        "node_modules/tslint/lib/rules/importBlacklistRule.js",
+        "node_modules/tslint/lib/rules/importSpacingRule.js",
+        "node_modules/tslint/lib/rules/indentRule.js",
+        "node_modules/tslint/lib/rules/interfaceNameRule.js",
+        "node_modules/tslint/lib/rules/interfaceOverTypeLiteralRule.js",
+        "node_modules/tslint/lib/rules/jsdocFormatRule.js",
+        "node_modules/tslint/lib/rules/labelPositionRule.js",
+        "node_modules/tslint/lib/rules/linebreakStyleRule.js",
+        "node_modules/tslint/lib/rules/matchDefaultExportNameRule.js",
+        "node_modules/tslint/lib/rules/maxClassesPerFileRule.js",
+        "node_modules/tslint/lib/rules/maxFileLineCountRule.js",
+        "node_modules/tslint/lib/rules/maxLineLengthRule.js",
+        "node_modules/tslint/lib/rules/memberAccessRule.js",
+        "node_modules/tslint/lib/rules/memberOrderingRule.js",
+        "node_modules/tslint/lib/rules/newParensRule.js",
+        "node_modules/tslint/lib/rules/newlineBeforeReturnRule.js",
+        "node_modules/tslint/lib/rules/noAngleBracketTypeAssertionRule.js",
+        "node_modules/tslint/lib/rules/noAnyRule.js",
+        "node_modules/tslint/lib/rules/noArgRule.js",
+        "node_modules/tslint/lib/rules/noBitwiseRule.js",
+        "node_modules/tslint/lib/rules/noBooleanLiteralCompareRule.js",
+        "node_modules/tslint/lib/rules/noConditionalAssignmentRule.js",
+        "node_modules/tslint/lib/rules/noConsecutiveBlankLinesRule.js",
+        "node_modules/tslint/lib/rules/noConsoleRule.js",
+        "node_modules/tslint/lib/rules/noConstructRule.js",
+        "node_modules/tslint/lib/rules/noDebuggerRule.js",
+        "node_modules/tslint/lib/rules/noDefaultExportRule.js",
+        "node_modules/tslint/lib/rules/noDuplicateSuperRule.js",
+        "node_modules/tslint/lib/rules/noDuplicateVariableRule.js",
+        "node_modules/tslint/lib/rules/noEmptyInterfaceRule.js",
+        "node_modules/tslint/lib/rules/noEmptyRule.js",
+        "node_modules/tslint/lib/rules/noEvalRule.js",
+        "node_modules/tslint/lib/rules/noFloatingPromisesRule.js",
+        "node_modules/tslint/lib/rules/noForInArrayRule.js",
+        "node_modules/tslint/lib/rules/noImportSideEffectRule.js",
+        "node_modules/tslint/lib/rules/noInferrableTypesRule.js",
+        "node_modules/tslint/lib/rules/noInferredEmptyObjectTypeRule.js",
+        "node_modules/tslint/lib/rules/noInternalModuleRule.js",
+        "node_modules/tslint/lib/rules/noInvalidTemplateStringsRule.js",
+        "node_modules/tslint/lib/rules/noInvalidThisRule.js",
+        "node_modules/tslint/lib/rules/noIrregularWhitespaceRule.js",
+        "node_modules/tslint/lib/rules/noMagicNumbersRule.js",
+        "node_modules/tslint/lib/rules/noMergeableNamespaceRule.js",
+        "node_modules/tslint/lib/rules/noMisusedNewRule.js",
+        "node_modules/tslint/lib/rules/noNamespaceRule.js",
+        "node_modules/tslint/lib/rules/noNonNullAssertionRule.js",
+        "node_modules/tslint/lib/rules/noNullKeywordRule.js",
+        "node_modules/tslint/lib/rules/noObjectLiteralTypeAssertionRule.js",
+        "node_modules/tslint/lib/rules/noParameterPropertiesRule.js",
+        "node_modules/tslint/lib/rules/noReferenceImportRule.js",
+        "node_modules/tslint/lib/rules/noReferenceRule.js",
+        "node_modules/tslint/lib/rules/noRequireImportsRule.js",
+        "node_modules/tslint/lib/rules/noShadowedVariableRule.js",
+        "node_modules/tslint/lib/rules/noSparseArraysRule.js",
+        "node_modules/tslint/lib/rules/noStringLiteralRule.js",
+        "node_modules/tslint/lib/rules/noStringThrowRule.js",
+        "node_modules/tslint/lib/rules/noSwitchCaseFallThroughRule.js",
+        "node_modules/tslint/lib/rules/noThisAssignmentRule.js",
+        "node_modules/tslint/lib/rules/noTrailingWhitespaceRule.js",
+        "node_modules/tslint/lib/rules/noUnboundMethodRule.js",
+        "node_modules/tslint/lib/rules/noUnnecessaryCallbackWrapperRule.js",
+        "node_modules/tslint/lib/rules/noUnnecessaryInitializerRule.js",
+        "node_modules/tslint/lib/rules/noUnnecessaryQualifierRule.js",
+        "node_modules/tslint/lib/rules/noUnnecessaryTypeAssertionRule.js",
+        "node_modules/tslint/lib/rules/noUnsafeAnyRule.js",
+        "node_modules/tslint/lib/rules/noUnsafeFinallyRule.js",
+        "node_modules/tslint/lib/rules/noUnusedExpressionRule.js",
+        "node_modules/tslint/lib/rules/noUnusedVariableRule.js",
+        "node_modules/tslint/lib/rules/noUseBeforeDeclareRule.js",
+        "node_modules/tslint/lib/rules/noVarKeywordRule.js",
+        "node_modules/tslint/lib/rules/noVarRequiresRule.js",
+        "node_modules/tslint/lib/rules/noVoidExpressionRule.js",
+        "node_modules/tslint/lib/rules/numberLiteralFormatRule.js",
+        "node_modules/tslint/lib/rules/objectLiteralKeyQuotesRule.js",
+        "node_modules/tslint/lib/rules/objectLiteralShorthandRule.js",
+        "node_modules/tslint/lib/rules/objectLiteralSortKeysRule.js",
+        "node_modules/tslint/lib/rules/oneLineRule.js",
+        "node_modules/tslint/lib/rules/oneVariablePerDeclarationRule.js",
+        "node_modules/tslint/lib/rules/onlyArrowFunctionsRule.js",
+        "node_modules/tslint/lib/rules/orderedImportsRule.js",
+        "node_modules/tslint/lib/rules/preferConditionalExpressionRule.js",
+        "node_modules/tslint/lib/rules/preferConstRule.js",
+        "node_modules/tslint/lib/rules/preferForOfRule.js",
+        "node_modules/tslint/lib/rules/preferFunctionOverMethodRule.js",
+        "node_modules/tslint/lib/rules/preferMethodSignatureRule.js",
+        "node_modules/tslint/lib/rules/preferObjectSpreadRule.js",
+        "node_modules/tslint/lib/rules/preferSwitchRule.js",
+        "node_modules/tslint/lib/rules/preferTemplateRule.js",
+        "node_modules/tslint/lib/rules/promiseFunctionAsyncRule.js",
+        "node_modules/tslint/lib/rules/quotemarkRule.js",
+        "node_modules/tslint/lib/rules/radixRule.js",
+        "node_modules/tslint/lib/rules/restrictPlusOperandsRule.js",
+        "node_modules/tslint/lib/rules/returnUndefinedRule.js",
+        "node_modules/tslint/lib/rules/semicolonRule.js",
+        "node_modules/tslint/lib/rules/spaceBeforeFunctionParenRule.js",
+        "node_modules/tslint/lib/rules/strictBooleanExpressionsRule.js",
+        "node_modules/tslint/lib/rules/strictTypePredicatesRule.js",
+        "node_modules/tslint/lib/rules/switchDefaultRule.js",
+        "node_modules/tslint/lib/rules/switchFinalBreakRule.js",
+        "node_modules/tslint/lib/rules/trailingCommaRule.js",
+        "node_modules/tslint/lib/rules/tripleEqualsRule.js",
+        "node_modules/tslint/lib/rules/typeLiteralDelimiterRule.js",
+        "node_modules/tslint/lib/rules/typedefRule.js",
+        "node_modules/tslint/lib/rules/typedefWhitespaceRule.js",
+        "node_modules/tslint/lib/rules/typeofCompareRule.js",
+        "node_modules/tslint/lib/rules/unifiedSignaturesRule.js",
+        "node_modules/tslint/lib/rules/useDefaultTypeParameterRule.js",
+        "node_modules/tslint/lib/rules/useIsnanRule.js",
+        "node_modules/tslint/lib/rules/variableNameRule.js",
+        "node_modules/tslint/lib/rules/whitespaceRule.js",
+        "node_modules/tslint/lib/rules.js",
+        "node_modules/tslint/lib/runner.js",
+        "node_modules/tslint/lib/test.js",
+        "node_modules/tslint/lib/tslint-cli.js",
+        "node_modules/tslint/lib/utils.js",
+        "node_modules/tslint-rule-documentation/dist/index.js",
+        "node_modules/tslint-rule-documentation/gruntfile.js",
+        "node_modules/tsutils/index.js",
+        "node_modules/tsutils/typeguard/index.js",
+        "node_modules/tsutils/typeguard/node.js",
+        "node_modules/tsutils/typeguard/type.js",
+        "node_modules/tsutils/util/index.js",
+        "node_modules/tsutils/util/usage.js",
+        "node_modules/tsutils/util/util.js",
+        "node_modules/typescript/lib/cancellationToken.js",
+        "node_modules/typescript/lib/tsc.js",
+        "node_modules/typescript/lib/tsserver.js",
+        "node_modules/typescript/lib/tsserverlibrary.js",
+        "node_modules/typescript/lib/typescript.js",
+        "node_modules/typescript/lib/typescriptServices.js",
+        "node_modules/typescript/lib/typingsInstaller.js",
+        "node_modules/typescript/lib/watchGuard.js",
+        "node_modules/wrappy/wrappy.js"
+      ],
+      ".json": [
+        "node_modules/ansi-regex/package.json",
+        "node_modules/ansi-styles/package.json",
+        "node_modules/atom-package-deps/.eslintrc.json",
+        "node_modules/atom-package-deps/package.json",
+        "node_modules/atom-package-path/package.json",
+        "node_modules/babel-code-frame/package-lock.json",
+        "node_modules/babel-code-frame/package.json",
+        "node_modules/balanced-match/package.json",
+        "node_modules/brace-expansion/package.json",
+        "node_modules/chalk/package.json",
+        "node_modules/colors/package.json",
+        "node_modules/commander/package.json",
+        "node_modules/concat-map/package.json",
+        "node_modules/consistent-env/.eslintrc.json",
+        "node_modules/consistent-env/package.json",
+        "node_modules/crypto-random-string/package.json",
+        "node_modules/diff/package.json",
+        "node_modules/escape-html/package.json",
+        "node_modules/escape-string-regexp/package.json",
+        "node_modules/esutils/package.json",
+        "node_modules/fs.realpath/package.json",
+        "node_modules/glob/package.json",
+        "node_modules/has-ansi/package.json",
+        "node_modules/inflight/package.json",
+        "node_modules/inherits/package.json",
+        "node_modules/is-utf8/package.json",
+        "node_modules/js-tokens/package.json",
+        "node_modules/lodash.uniq/package.json",
+        "node_modules/loophole/package.json",
+        "node_modules/minimatch/package.json",
+        "node_modules/once/package.json",
+        "node_modules/path-is-absolute/package.json",
+        "node_modules/path-parse/package.json",
+        "node_modules/resolve/lib/core.json",
+        "node_modules/resolve/package.json",
+        "node_modules/sb-callsite/package.json",
+        "node_modules/sb-exec/.eslintrc.json",
+        "node_modules/sb-exec/package.json",
+        "node_modules/sb-fs/package.json",
+        "node_modules/sb-memoize/.eslintrc.json",
+        "node_modules/sb-memoize/package.json",
+        "node_modules/sb-npm-path/.eslintrc.json",
+        "node_modules/sb-npm-path/package.json",
+        "node_modules/sb-promisify/package.json",
+        "node_modules/semver/package.json",
+        "node_modules/strip-ansi/package.json",
+        "node_modules/strip-bom-buf/package.json",
+        "node_modules/supports-color/package.json",
+        "node_modules/tslib/bower.json",
+        "node_modules/tslib/package.json",
+        "node_modules/tslint/package.json",
+        "node_modules/tslint-rule-documentation/dist/plugins.json",
+        "node_modules/tslint-rule-documentation/package.json",
+        "node_modules/tslint-rule-documentation/tslint.json",
+        "node_modules/tsutils/package.json",
+        "node_modules/typescript/package.json",
+        "node_modules/wrappy/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec",
+          "spec/fixtures/invalid",
+          "spec/fixtures/invalid-typechecked",
+          "spec/fixtures/valid",
+          "spec/fixtures/valid-typechecked"
+        ],
+        "dependencies": {
+          "atom-package-deps": "^4.3.1",
+          "crypto-random-string": "^1.0.0",
+          "escape-html": "^1.0.3",
+          "loophole": "^1.1.0",
+          "resolve": "^1.2.0",
+          "tslint": "5.5.0",
+          "tslint-rule-documentation": "^1.0.1",
+          "typescript": "2.4.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-deps",
+          "node_modules/atom-package-deps/lib"
+        ],
+        "dependencies": {
+          "atom-package-path": "^1.1.0",
+          "sb-exec": "^3.0.1",
+          "sb-fs": "^3.0.0",
+          "semver": "^5.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-package-path/lib",
+          "node_modules/atom-package-path",
+          "node_modules/atom-package-path/spec"
+        ],
+        "dependencies": {
+          "sb-callsite": "^1.1.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/babel-code-frame/lib",
+          "node_modules/babel-code-frame"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.3",
+          "esutils": "^2.0.2",
+          "js-tokens": "^3.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^1.0.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.2.1",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/consistent-env",
+          "node_modules/consistent-env/lib"
+        ],
+        "dependencies": {
+          "lodash.uniq": "^4.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/glob"
+        ],
+        "dependencies": {
+          "fs.realpath": "^1.0.0",
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "^3.0.4",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.1.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/once"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/resolve/example",
+          "node_modules/resolve",
+          "node_modules/resolve/lib",
+          "node_modules/resolve/test",
+          "node_modules/resolve/test/dotdot/abc",
+          "node_modules/resolve/test/dotdot",
+          "node_modules/resolve/test/module_dir/xmodules/aaa",
+          "node_modules/resolve/test/module_dir/ymodules/aaa",
+          "node_modules/resolve/test/module_dir/zmodules/bbb",
+          "node_modules/resolve/test/node_path/x/aaa",
+          "node_modules/resolve/test/node_path/x/ccc",
+          "node_modules/resolve/test/node_path/y/bbb",
+          "node_modules/resolve/test/node_path/y/ccc",
+          "node_modules/resolve/test/pathfilter/deep_ref",
+          "node_modules/resolve/test/precedence/aaa",
+          "node_modules/resolve/test/precedence",
+          "node_modules/resolve/test/precedence/bbb",
+          "node_modules/resolve/test/resolver/baz",
+          "node_modules/resolve/test/resolver",
+          "node_modules/resolve/test/resolver/dot_main",
+          "node_modules/resolve/test/resolver/dot_slash_main",
+          "node_modules/resolve/test/resolver/incorrect_main",
+          "node_modules/resolve/test/resolver/other_path/lib",
+          "node_modules/resolve/test/resolver/other_path",
+          "node_modules/resolve/test/resolver/quux/foo",
+          "node_modules/resolve/test/resolver/same_names/foo",
+          "node_modules/resolve/test/resolver/same_names",
+          "node_modules/resolve/test/resolver/without_basedir"
+        ],
+        "dependencies": {
+          "path-parse": "^1.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-exec",
+          "node_modules/sb-exec/decls",
+          "node_modules/sb-exec/lib"
+        ],
+        "dependencies": {
+          "consistent-env": "^1.2.0",
+          "lodash.uniq": "^4.5.0",
+          "sb-npm-path": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-fs/lib",
+          "node_modules/sb-fs"
+        ],
+        "dependencies": {
+          "sb-promisify": "^2.0.1",
+          "strip-bom-buf": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/sb-npm-path",
+          "node_modules/sb-npm-path/decls",
+          "node_modules/sb-npm-path/lib"
+        ],
+        "dependencies": {
+          "sb-memoize": "^1.0.2",
+          "sb-promisify": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/strip-bom-buf"
+        ],
+        "dependencies": {
+          "is-utf8": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tslint/lib/configs",
+          "node_modules/tslint/lib",
+          "node_modules/tslint/lib/formatters",
+          "node_modules/tslint/lib/language/formatter",
+          "node_modules/tslint/lib/language/rule",
+          "node_modules/tslint/lib/language",
+          "node_modules/tslint/lib/language/walker",
+          "node_modules/tslint/lib/rules",
+          "node_modules/tslint/lib/test",
+          "node_modules/tslint"
+        ],
+        "dependencies": {
+          "babel-code-frame": "^6.22.0",
+          "colors": "^1.1.2",
+          "commander": "^2.9.0",
+          "diff": "^3.2.0",
+          "glob": "^7.1.1",
+          "minimatch": "^3.0.4",
+          "resolve": "^1.3.2",
+          "semver": "^5.3.0",
+          "tslib": "^1.7.1",
+          "tsutils": "^2.5.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/tsutils",
+          "node_modules/tsutils/typeguard",
+          "node_modules/tsutils/util"
+        ],
+        "dependencies": {
+          "tslib": "^1.7.1"
+        }
+      }
+    ]
+  }
+}

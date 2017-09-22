@@ -14,12 +14,14 @@
     ]
   "exception-reporting":
     userId: "17492884-cff6-ef41-9cac-e16f092af182"
+  "linter-eslint":
+    disableWhenNoEslintConfig: false
   "linter-flake8":
     ignoreErrorCodes: [
       "E251"
     ]
   "linter-ui-default":
-    showPanel: true
+    panelHeight: 81
   pigments:
     autocompleteSuggestionsFromValue: true
     groupPaletteColors: "by file"
