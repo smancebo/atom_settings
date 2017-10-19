@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24454-1nsxnnz.clqf8hncdi"
+    ]
+  ],
+  "_from": "../d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+  "_id": "intellij-darcula-syntax@1.0.11",
+  "_inCache": true,
+  "_location": "/intellij-darcula-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+  "_shasum": "0a8f68191be58393a5a461f762ac68058be89b10",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24454-v6mfkx.y764fpf1or/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24454-1nsxnnz.clqf8hncdi",
+  "bugs": {
+    "url": "https://github.com/dmitmel/atom-intellij-dracula-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Theme for Atom inspired by JetBrain's Darcula theme.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/dmitmel/atom-intellij-dracula-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "dark",
+    "darcula"
+  ],
+  "license": "Apache-2.0",
+  "name": "intellij-darcula-syntax",
+  "optionalDependencies": {},
+  "readme": "# Atom IntelliJ Darcula Syntax Theme\n\nThis theme is fully inspired by [JetBrains's](http://jetbrains.com) Darcula theme for [IntelliJ](http://jetbrains.com/idea/)\nand their [other IDEs](https://www.jetbrains.com/products.html). But this theme has more brighter colors than original.\n\n## Screenshots\n\n`<Comming soon>`\n\n![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)\n\n# References\n\nActually, this theme is modified version of <https://github.com/gtranchedone/atom-darcula-syntax>.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitmel/atom-intellij-dracula-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "1.0.11",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

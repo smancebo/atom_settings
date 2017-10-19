@@ -1,0 +1,30 @@
+.syntax--source.syntax--shell {
+    .syntax--string {
+        &.syntax--interpolated,
+        &.syntax--other {
+            color: @syntax-text-color;
+            & > .syntax--punctuation.syntax--begin,
+            & > .syntax--punctuation.syntax--end {
+                color      : @syntax-color-keyword;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .syntax--string.syntax--backtick {
+        color: @syntax-color-keyword;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--logical-expression {
+        color      : @syntax-color-keyword;
+        font-weight: bold;
+    }
+
+    .syntax--keyword.syntax--operator {
+        &.syntax--list,
+        &.syntax--logical {
+            color      : @syntax-color-keyword;
+            font-weight: bold;
+        }
+    }
+}

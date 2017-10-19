@@ -1,0 +1,75 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24073-uvx52d.slt0hvkj4i"
+    ]
+  ],
+  "_from": "../d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+  "_id": "chester-atom-syntax@0.3.0",
+  "_inCache": true,
+  "_location": "/chester-atom-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+  "_shasum": "abbe1e4e0e8626c2cb4836e347c79b05e7c144e9",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24073-1tzyabg.q264y7rpb9/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24073-uvx52d.slt0hvkj4i",
+  "bugs": {
+    "url": "https://github.com/csutter/chester-atom-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "A pretty Atom syntax theme based on Lonely Planet colours",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/csutter/chester-atom-syntax#readme",
+  "keywords": [
+    "chester",
+    "syntax",
+    "theme",
+    "atom"
+  ],
+  "license": "MIT",
+  "name": "chester-atom-syntax",
+  "optionalDependencies": {},
+  "readme": "# Chester\nA syntax highlighting theme for [Atom](https://atom.io/), with colors based on Lonely Planet's [Rizzo](https://github.com/lonelyplanet/rizzo) styles. Looks quite nice.\n\n![Screenshot](https://raw.githubusercontent.com/csutter/chester-atom-syntax/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csutter/chester-atom-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.3.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

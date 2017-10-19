@@ -1,0 +1,258 @@
+// General language highlighting
+
+.syntax--comment {
+    color: @syntax-color-comment;
+
+    &.syntax--documentation {
+        color: @syntax-color-doc-comment;
+    }
+
+    &.syntax--punctuation.syntax--definition {
+        color: inherit;
+    }
+}
+
+.syntax--keyword {
+    &.syntax--other.syntax--special-method,
+    &:not(.syntax--operator) {
+        color      : @syntax-color-keyword;
+        font-weight: bold;
+    }
+    &.syntax--operator:not(.syntax--control, .syntax--logical) {
+        color      : @syntax-color-operator;
+        font-weight: normal;
+    }
+
+    &.syntax--other {
+        &.syntax--unit {
+            color      : @syntax-color-unit;
+            font-weight: normal;
+        }
+
+        &.syntax--documentation {
+            color          : @syntax-color-doc-comment-tag;
+            font-weight    : bold;
+            text-decoration: underline;
+        }
+    }
+}
+
+.syntax--storage {
+    &.syntax--type {
+        color      : @syntax-text-color;
+        font-weight: bold;
+
+        &.syntax--annotation {
+            color      : @syntax-color-annotation;
+            font-weight: normal;
+        }
+    }
+    &.syntax--class,
+    &.syntax--extends,
+    &.syntax--function,
+    &.syntax--modifier,
+    &.syntax--type.syntax--primitive,
+    &.syntax--var {
+        color      : @syntax-color-keyword;
+        font-weight: bold;
+    }
+
+    &.syntax--modifier {
+        &.syntax--import,
+        &.syntax--package {
+            color      : @syntax-text-color;
+            font-weight: normal;
+        }
+    }
+
+    &.syntax--todo {
+        color      : @syntax-color-todo;
+        font-style : italic;
+        font-weight: normal;
+    }
+}
+
+.syntax--variable {
+    color: @syntax-color-variable;
+
+    &.syntax--language {
+        color      : @syntax-color-builtin-variable;
+        font-weight: bold;
+    }
+
+    &.syntax--class,
+    &.syntax--instance,
+    &.syntax--property {
+        color: @syntax-color-property;
+    }
+
+    &.syntax--class {
+        color: @syntax-color-static-variable;
+    }
+
+    &.syntax--global {
+        color: @syntax-color-global-variable;
+    }
+
+    &.syntax--parameter {
+        color: @syntax-color-parameter;
+    }
+    &.syntax--support:not(.syntax--property) {
+        color      : @syntax-color-keyword;
+        font-weight: bold;
+    }
+}
+
+.syntax--constant {
+    color: @syntax-color-constant;
+    &.syntax--enum,
+    &:not(.syntax--language, .syntax--character, .syntax--numeric, .syntax--other, .syntax--regexp, .syntax--symbol) {
+        font-style: italic;
+    }
+
+    &.syntax--language {
+        color      : @syntax-color-builtin-variable;
+        font-weight: bold;
+    }
+
+    &.syntax--character.syntax--escape {
+        color: @syntax-color-keyword;
+    }
+    &.syntax--numeric:not(.syntax--hex-value) {
+        color: @syntax-color-number;
+    }
+
+    &.syntax--other {
+        &.syntax--symbol {
+            color     : @syntax-color-symbol;
+            font-style: normal;
+        }
+
+        &.syntax--unit {
+            color: @syntax-color-unit;
+        }
+    }
+
+    &.syntax--regexp {
+        font-style: normal;
+    }
+}
+
+.syntax--string {
+    color: @syntax-color-string;
+
+    &.syntax--regexp {
+        color: @syntax-color-regexp;
+    }
+}
+
+.syntax--punctuation {
+    &.syntax--separator {
+        &.syntax--comma,
+        &.syntax--delimiter,
+        &.syntax--dictionary:not(.syntax--valuepair),
+        &.syntax--list,
+        &.syntax--object,
+        &.syntax--parameters {
+            color: @syntax-color-comma;
+        }
+    }
+
+    &.syntax--separator.syntax--statement,
+    &.syntax--terminator {
+        color: @syntax-color-semicolon;
+    }
+
+    &.syntax--section {
+        &.syntax--embedded {
+            color: @syntax-color-keyword;
+        }
+    }
+}
+
+.syntax--meta.syntax--embedded,
+.syntax--source.syntax--embedded {
+    color: @syntax-text-color;
+}
+
+.syntax--support {
+    &.syntax--class {
+        color      : @syntax-color-class;
+        font-weight: bold;
+    }
+
+    &.syntax--function {
+        color: @syntax-color-function-declaration;
+
+        &.syntax--any-method {
+            color: @syntax-color-method-declaration;
+        }
+
+        &.syntax--builtin {
+            color: @syntax-color-builtin-function;
+        }
+    }
+}
+
+.syntax--entity {
+    &.syntax--name.syntax--function {
+        color: @syntax-color-function-declaration;
+    }
+
+    &.syntax--inherited-class,
+    &.syntax--name.syntax--class,
+    &.syntax--name.syntax--type,
+    &.syntax--name.syntax--type.syntax--instance {
+        color      : @syntax-color-class;
+        font-weight: bold;
+    }
+
+    &.syntax--name.syntax--section {
+        color      : @syntax-color-symbol;
+        font-weight: bold;
+    }
+
+    &.syntax--name.syntax--tag {
+        color: @syntax-color-tag;
+    }
+
+    &.syntax--other.syntax--attribute-name {
+        color: @syntax-color-attribute;
+    }
+}
+
+.syntax--meta {
+    &.syntax--comma {
+        color: @syntax-color-comma;
+    }
+    &.syntax--period:not(.syntax--decimal) {
+        color: @syntax-color-dot;
+    }
+
+    &.syntax--function-call {
+        .syntax--function:not(.syntax--builtin, .syntax--parameter) {
+            color: @syntax-color-function-call;
+        }
+    }
+
+    &.syntax--method-call {
+        .syntax--function:not(.syntax--builtin, .syntax--parameter) {
+            color: @syntax-color-method-call;
+        }
+    }
+}
+
+.syntax--none {
+    color: @syntax-text-color;
+}
+
+.syntax--invalid {
+    &.syntax--deprecated {
+        color           : @syntax-deprecated-fg !important;
+        background-color: @syntax-deprecated-bg !important;
+    }
+    &.syntax--illegal {
+        color           : @syntax-illegal-fg !important;
+        background-color: @syntax-illegal-bg !important;
+    }
+}

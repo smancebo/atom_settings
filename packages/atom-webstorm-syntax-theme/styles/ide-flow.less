@@ -1,0 +1,39 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/stylesheets/ui-variables.less
+// for a full listing of what's available.
+@import "octicon-utf-codes";
+@import "ui-variables";
+
+// @error-color: #b22222;
+// @error-color: white;
+atom-text-editor::shadow {
+  .ide-flow-error {
+    background-color: @background-color-highlight;
+    z-index: 3;
+  }
+
+  .highlight {
+    &.ide-flow-error .region {
+      // background: linear-gradient(to right, fadeout(@background-color-error, 30%) 0%, fadeout(@background-color-error, 35%) 100%);
+      background: rgba(255, 0, 0, 0.4);
+      z-index: 3;
+    }
+  }
+
+  .gutter .line-number {
+    &.ide-flow-error .icon-right {
+      visibility: visible;
+      &:before {
+        content: @alert;
+        color: @text-color-error;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+.ide-flow-tooltip {
+  font-family: Consolas, monospace;
+  white-space: pre !important;
+}

@@ -1,0 +1,60 @@
+.syntax--markup,
+.syntax--source.syntax--asciidoc,
+.syntax--source.syntax--gfm {
+    -webkit-font-smoothing: auto;
+
+    .syntax--link .syntax--entity {
+        color: @syntax-color-string;
+    }
+
+    &.syntax--link {
+        color          : @syntax-color-url;
+        text-decoration: underline;
+    }
+
+    &.syntax--heading {
+        color: @syntax-color-md-headings;
+
+        .syntax--punctuation.syntax--definition.syntax--heading {
+            color: @light-blue;
+        }
+    }
+
+    &.syntax--strike {
+        text-decoration: line-through;
+    }
+
+    &.syntax--bold {
+        color      : @syntax-color-md-bold;
+        font-weight: bold;
+    }
+
+    &.syntax--italic {
+        color     : @syntax-color-md-italics;
+        font-style: italic;
+    }
+
+    &.syntax--quote {
+        color: @syntax-color-md-quote;
+    }
+
+    &.syntax--changed {
+        color: @dark-purple;
+    }
+
+    &.syntax--deleted {
+        color: @light-red;
+    }
+
+    &.syntax--inserted {
+        color: @dark-yellow;
+    }
+
+    &.syntax--raw {
+        color: @dark-yellow;
+    }
+
+    .syntax--list {
+        color: @light-red;
+    }
+}

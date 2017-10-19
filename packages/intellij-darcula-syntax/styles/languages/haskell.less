@@ -1,0 +1,34 @@
+.syntax--source.syntax--haskell {
+    .syntax--meta.syntax--preprocessor {
+        color: @syntax-color-annotation;
+    }
+
+    .syntax--variable.syntax--other.syntax--generic-type {
+        color: @syntax-color-generic;
+    }
+
+    .syntax--keyword.syntax--operator.syntax--function.syntax--infix {
+        color: @syntax-color-function-call;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--quasiquotes.syntax--begin + .syntax--entity.syntax--name.syntax--tag {
+        color: @light-blue;
+    }
+
+    .syntax--meta.syntax--type-signature .syntax--entity.syntax--name.syntax--type {
+        color      : @syntax-color-class;
+        font-weight: bold;
+    }
+
+    .syntax--constant.syntax--language {
+        &.syntax--empty-list,
+        &.syntax--unit {
+            color      : @syntax-text-color;
+            font-weight: normal;
+        }
+    }
+
+    .syntax--escape.syntax--newline {
+        color: @syntax-color-keyword;
+    }
+}

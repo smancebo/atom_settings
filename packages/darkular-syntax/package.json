@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24846-tl1v0k.23dol2fbt9"
+    ]
+  ],
+  "_from": "../d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+  "_id": "darkular-syntax@0.3.0",
+  "_inCache": true,
+  "_location": "/darkular-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+  "_shasum": "07c385f595e5bea03d8849d808e8fa1e5d109dfd",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24846-iucb9v.h0xic6jemi/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24846-tl1v0k.23dol2fbt9",
+  "authors": [
+    "Josh Glendenning"
+  ],
+  "bugs": {
+    "url": "https://github.com/joshglendenning/darkular-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "Atom syntax theme similar to Intellij IDEA's Darkula.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "homepage": "https://github.com/joshglendenning/darkular-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "darkular-syntax",
+  "optionalDependencies": {},
+  "readme": "# darkular-syntax theme\n\nAtom syntax theme similar to Intellij IDEA's Darkula.\n\n![Theme Screenshot](https://raw.githubusercontent.com/joshglendenning/darkular-syntax/master/screenshot.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshglendenning/darkular-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.3.0",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

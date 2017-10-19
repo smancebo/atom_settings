@@ -1,0 +1,237 @@
+@import "colors";
+
+atom-text-editor, :host {
+  background-color: @background;
+  color: @foreground;
+  .wrap-guide {
+    background-color: @guide !important;
+  }
+  .indent-guide {
+    color: @guide;
+  }
+  .invisible-character {
+    color: @gutter-bg;
+  }
+  .gutter {
+    background-color: @gutter-bg;
+    color: @gutter-fg;
+
+    .line-number {
+      &.cursor-line {
+        background-color: lighten(@gutter-bg, 10%);
+        color: lighten(@gutter-fg, 10%);
+      }
+
+      &.cursor-line-no-selection {
+        color: lighten(@gutter-fg, 10%);
+      }
+    }
+  }
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @gutter-fg;
+  }
+  .invisible {
+  }
+  .cursor {
+    color: @cursor-fg;
+  }
+  .selection .region {
+    background-color: @selection;
+  }
+}
+
+.scroll-view {
+    padding-left: 5px;
+}
+
+.bracket-matcher .region {
+  position: absolute;
+  border: 0 !important;
+  background-color: lighten(@background, 15%);
+}
+
+.comment {
+  color: @comment;
+}
+
+.entity {
+  &.other.inherited-class {
+    color: @green;
+  }
+}
+
+.keyword {
+  color: @orange;
+  &.operator {
+    color: @foreground;
+  }
+  &.other.unit {
+    color: @light-orange;
+  }
+}
+
+.storage {
+  color: @orange;
+}
+
+.constant {
+  color: @purple;
+
+  &.character.escape {
+    color: @cyan;
+  }
+
+  &.numeric {
+    color: @blue;
+  }
+
+}
+
+.variable {
+  color: @foreground;
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @foreground;
+}
+
+.string {
+  color: @green;
+  &.regexp {
+    color: @cyan;
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @comment;
+    }
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @foreground;
+    }
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+    &.bold {
+      font-weight: bold;
+    }
+    &.italic {
+      font-style: italic;
+    }
+  }
+}
+
+.support {
+  &.class {
+    color: @light-orange;
+  }
+  &.function  {
+    color: @cyan;
+    &.any-method {
+      color: @blue;
+    }
+  }
+}
+
+.entity {
+  &.punctuation {
+    color: @foreground;
+  }
+  &.name.class, &.name.type.class {
+    color: @light-orange;
+  }
+  &.name.tag {
+    color: @light-orange;
+  }
+  &.other.attribute-name {
+    color: @orange;
+
+    &.id {
+      color: @light-orange;
+    }
+  }
+}
+
+.meta {
+}
+
+.none {
+  color: @foreground;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @purple;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
+
+atom-text-editor.vim-mode.command-mode.is-focused,
+atom-text-editor.vim-mode.operator-pending-mode.is-focused,
+atom-text-editor.vim-mode.visual-mode.is-focused {
+  &::shadow, // shadow-DOM enabled
+  &          // shadow-DOM disabled
+  {
+    .cursor, .cursor.blink-off {
+      background-color: #fff;
+      opacity: 0.4;
+      visibility: visible;
+    }
+  }
+}

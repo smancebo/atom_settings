@@ -1,0 +1,40 @@
+.syntax--source.syntax--python {
+    .syntax--support.syntax--magic {
+        &.syntax--function,
+        &.syntax--variable {
+            color      : @light-red;
+            font-weight: normal;
+        }
+    }
+
+    .syntax--entity.syntax--function.syntax--decorator {
+        color      : @syntax-color-annotation;
+        font-weight: normal;
+    }
+
+    .syntax--meta {
+        &.syntax--decorator,
+        &.syntax--function-call,
+        &.syntax--method-call {
+            .syntax--arguments .syntax--variable.syntax--parameter {
+                color: @light-red;
+            }
+
+            color: @syntax-color-function-call;
+
+            & > .syntax--arguments {
+                color: @syntax-text-color;
+            }
+        }
+    }
+
+    .syntax--string > .syntax--storage.syntax--type.syntax--string {
+        color      : @syntax-color-string;
+        font-weight: normal;
+    }
+
+    .syntax--keyword.syntax--operator.syntax--logical {
+        color      : @syntax-color-keyword;
+        font-weight: bold;
+    }
+}

@@ -7,10 +7,13 @@
     preferredFormat: "HEX"
     randomColor: false
   core:
+    disabledPackages: [
+      "linter-eslint"
+    ]
     telemetryConsent: "no"
     themes: [
-      "atom-material-ui"
-      "atom-material-syntax-dark"
+      "one-dark-ui"
+      "tellijay-dark-syntax"
     ]
   "exception-reporting":
     userId: "17492884-cff6-ef41-9cac-e16f092af182"
@@ -21,7 +24,7 @@
       "E251"
     ]
   "linter-ui-default":
-    panelHeight: 81
+    panelHeight: 69
   pigments:
     autocompleteSuggestionsFromValue: true
     groupPaletteColors: "by file"
@@ -34,7 +37,6 @@
         blue: "#5fa3cd"
     style:
       theme: "one-dark"
-  "tree-view":
-    hideVcsIgnoredFiles: true
+  "tree-view": {}
   welcome:
     showOnStartup: false

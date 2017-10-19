@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24992-1ycs7nc.1u2eyzxgvi"
+    ]
+  ],
+  "_from": "../d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+  "_id": "atom-webstorm-syntax-theme@0.0.2",
+  "_inCache": true,
+  "_location": "/atom-webstorm-syntax-theme",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+  "_shasum": "53c1a44dff86bffcd4cd551b5f58ff6f25de3440",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24992-37r3pw.h23afnipb9/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24992-1ycs7nc.1u2eyzxgvi",
+  "bugs": {
+    "url": "https://github.com/vjpr/atom-webstorm-syntax-theme/issues"
+  },
+  "dependencies": {},
+  "description": "JetBrains WebStorm Default Light Syntax Theme for Atom",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/vjpr/atom-webstorm-syntax-theme#readme",
+  "keywords": [
+    "syntax",
+    "theme"
+  ],
+  "license": "MIT",
+  "name": "atom-webstorm-syntax-theme",
+  "optionalDependencies": {},
+  "readme": "# JetBrains WebStorm Default Light Syntax Theme for Atom\n\n> A port of the default syntax theme from JetBrains Webstorm/IntelliJ IDEs.\n\n## Supported grammars\n\n### Core\n\n- [x] language-json\n- [x] language-javascript\n- [ ] language-less\n- [ ] language-scss\n\n### Community\n\n- [x] language-javascript-jsx (Grammar name: `Javascript with JSX`)\n- [x] react (Grammar name: `Javascript JSX`)\n- [x] [language-markdown](https://github.com/burodepeper/language-markdown)\n- [x] [language-babel](https://github.com/gandm/language-babel) (Grammar name:  `Babel ES6 JavaScript`)\n  - This grammar allows much more fine-grain styling of ES6/7 Javascript.\n  - NOTE: I don't use this plugin because it doesn't fully support Flow.\n\n## Development\n\nThe `samples/` dir contains code samples from IntelliJ/WebStorm\n`Preferences > Editor > Colors & Fonts`. You can compare the colors from here to ensure they match the colors in Atom.\n\n## See Also\n\n- [atom-webstorm-ui-theme](https://github.com/vjpr/atom-webstorm-ui-theme)\n- [atom-webstorm-keymap](https://github.com/vjpr/atom-webstorm-keymap)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vjpr/atom-webstorm-syntax-theme.git"
+  },
+  "theme": "syntax",
+  "version": "0.0.2",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

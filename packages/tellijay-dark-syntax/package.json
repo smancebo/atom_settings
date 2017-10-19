@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+        "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+        "type": "local"
+      },
+      "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24565-7zzbar.i967096bt9"
+    ]
+  ],
+  "_from": "../d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+  "_id": "tellijay-dark-syntax@0.3.1",
+  "_inCache": true,
+  "_location": "/tellijay-dark-syntax",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+    "spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+    "type": "local"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:../d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+  "_shasum": "db4d68699e2d3cf2721aa6ab07cc86a92091a225",
+  "_shrinkwrap": null,
+  "_spec": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/d-117919-24565-e3egvg.ma18ctmx6r/package.tgz",
+  "_where": "/private/var/folders/tb/t80h6lm53jn_kxnb2srfvr4r0000gn/T/apm-install-dir-117919-24565-7zzbar.i967096bt9",
+  "bugs": {
+    "url": "https://github.com/ckdot/tellijay-dark-syntax/issues"
+  },
+  "dependencies": {},
+  "description": "An atom syntax theme similar to the Darcula theme of IntelliJ Idea 15.",
+  "devDependencies": {},
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "homepage": "https://github.com/ckdot/tellijay-dark-syntax#readme",
+  "keywords": [
+    "syntax",
+    "theme",
+    "php",
+    "intellij",
+    "idea",
+    "darcula",
+    "phpstorm"
+  ],
+  "license": "MIT",
+  "name": "tellijay-dark-syntax",
+  "optionalDependencies": {},
+  "readme": "# tellijay-dark-syntax theme\n\nAn atom syntax theme similar to the Darcula theme of IntelliJ Idea 15.\n\n![A screenshot of Tellijay Dark](https://cloud.githubusercontent.com/assets/7283097/18229936/c2648112-728b-11e6-9640-6e108fa98dcc.png)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckdot/tellijay-dark-syntax.git"
+  },
+  "theme": "syntax",
+  "version": "0.3.1",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
